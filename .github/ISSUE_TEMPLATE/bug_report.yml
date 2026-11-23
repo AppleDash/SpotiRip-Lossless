@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem without including credentials or private files
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: SpotiRip Lossless version
+      description: Output of `./spotirip-lossless --version`
+      placeholder: 2026.11.23.1
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system
+      description: Distribution, release, architecture, and relevant library versions
+      placeholder: Ubuntu 24.04, x86-64
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Current and expected behavior
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Provide the command and minimal steps needed to reproduce the problem
+      placeholder: ./spotirip-lossless --verify "SPOTIFY_TRACK_URL"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Include redacted error output only. Never attach credentials, WVD files, private captures, or account identifiers.
+      render: text
+  - type: checkboxes
+    id: redaction
+    attributes:
+      label: Sensitive data
+      options:
+        - label: I removed credentials, WVD data, account identifiers, and private paths from this report.
+          required: true

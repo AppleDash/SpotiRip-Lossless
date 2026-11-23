@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cmd/**'
+      - 'internal/**'
+      - 'reference/**'
+      - 'vendor/**'
+      - 'scripts/**'
+      - 'go.mod'
+      - 'go.sum'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    paths:
+      - 'cmd/**'
+      - 'internal/**'
+      - 'reference/**'
+      - 'vendor/**'
+      - 'scripts/**'
+      - 'go.mod'
+      - 'go.sum'
+      - '.github/workflows/ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.1.0
+        with:
+          go-version: '1.27.4'
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y build-essential ffmpeg flac libasound2-dev libflac-dev libmpg123-dev libogg-dev libvorbis-dev
+      - name: Check source formatting
+        run: test -z "$(gofmt -l cmd internal)"
+      - name: Run tests
+        run: go test ./cmd/... ./internal/...
+      - name: Collect third-party licenses
+        run: python3 scripts/collect-licenses.py
+      - name: Build release package
+        run: ./scripts/build-release.sh
+      - name: Validate archive checksum
+        working-directory: dist
+        run: sha256sum -c spotirip-lossless-linux-amd64.tar.gz.sha256
