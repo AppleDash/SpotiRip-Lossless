@@ -49,3 +49,20 @@ jobs:
       - name: Validate archive checksum
         working-directory: dist
         run: sha256sum -c spotirip-lossless-linux-amd64.tar.gz.sha256
+
+  windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.1.0
+        with:
+          go-version: '1.27.4'
+      - name: Install MinGW-w64
+        run: choco install mingw --no-progress -y
+      - name: Run Windows tests
+        run: go test -ldflags='-linkmode=external' ./cmd/... ./internal/...
+      - name: Build Windows release package
+        run: ./scripts/build-release.sh

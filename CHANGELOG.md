@@ -2,6 +2,19 @@
 
 All notable changes are documented here. Versions use numeric dotted identifiers and release tags use the same value prefixed with `v`.
 
+## 2026.11.24.1
+
+### Added
+
+- Windows x86-64 executable with the same audio, video, batch, resume, metadata, and self-update features as Linux
+- Windows-safe output filenames and statically linked MinGW/C++ runtime
+- Native Windows CI and GitHub Actions release packages for Linux and Windows
+
+### Verified
+
+- Windows engine and update tests under Wine
+- Real FLAC, OGG, and 1080p MP4 downloads with full decode verification under Wine
+
 ## 2026.11.23.1
 
 ### Changed

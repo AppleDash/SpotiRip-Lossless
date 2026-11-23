@@ -18,7 +18,7 @@ static uint64_t rol64(uint64_t value, uint64_t count) {
     count &= 63;
     return value << count | value >> (-count & 63);
 }
-static void nested_0164e4f0(undefined8 *param_1,long *param_2)
+static void nested_0164e4f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -26,17 +26,17 @@ static void nested_0164e4f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e4f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e4f0((undefined8 *)cursor, (long *)state);
+    nested_0164e4f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e510(undefined8 *param_1,long *param_2)
+static void nested_0164e510(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -44,17 +44,17 @@ static void nested_0164e510(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e510(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e510((undefined8 *)cursor, (long *)state);
+    nested_0164e510((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e530(undefined8 *param_1,long *param_2)
+static void nested_0164e530(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -62,17 +62,17 @@ static void nested_0164e530(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e530(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e530((undefined8 *)cursor, (long *)state);
+    nested_0164e530((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e550(undefined8 *param_1,long *param_2)
+static void nested_0164e550(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -80,17 +80,17 @@ static void nested_0164e550(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e550(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e550((undefined8 *)cursor, (long *)state);
+    nested_0164e550((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e570(long *param_1,long *param_2)
+static void nested_0164e570(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -100,38 +100,38 @@ static void nested_0164e570(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164e570(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e570((long *)cursor, (long *)state);
+    nested_0164e570((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e590(undefined8 *param_1,long *param_2)
+static void nested_0164e590(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
-  *(long *)(lVar1 + lVar2 * 4) = *(long *)(lVar1 + 8 + lVar2 * 4) * *(long *)(lVar1 + lVar2 * 4);
+  *(int64_t *)(lVar1 + lVar2 * 4) = *(int64_t *)(lVar1 + 8 + lVar2 * 4) * *(int64_t *)(lVar1 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_164e590(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e590((undefined8 *)cursor, (long *)state);
+    nested_0164e590((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e5b0(undefined8 *param_1,long *param_2)
+static void nested_0164e5b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -139,23 +139,23 @@ static void nested_0164e5b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164e5b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e5b0((undefined8 *)cursor, (long *)state);
+    nested_0164e5b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e5d0(undefined8 *param_1,long *param_2)
+static void nested_0164e5d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 & *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -163,11 +163,11 @@ static void nested_0164e5d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e5d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e5d0((undefined8 *)cursor, (long *)state);
+    nested_0164e5d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e5f0(long *param_1,long *param_2)
+static void nested_0164e5f0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -176,26 +176,26 @@ static void nested_0164e5f0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164e5f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e5f0((long *)cursor, (long *)state);
+    nested_0164e5f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e620(undefined8 *param_1,long *param_2)
+static void nested_0164e620(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 + *(int *)(*param_2 + 4 + lVar2 * 4);
@@ -203,11 +203,11 @@ static void nested_0164e620(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e620(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e620((undefined8 *)cursor, (long *)state);
+    nested_0164e620((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e640(long *param_1,long *param_2)
+static void nested_0164e640(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -217,27 +217,27 @@ static void nested_0164e640(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164e640(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e640((long *)cursor, (long *)state);
+    nested_0164e640((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e660(undefined8 *param_1,long *param_2)
+static void nested_0164e660(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 4 + lVar3 * 4) & 0x1f;
@@ -246,11 +246,11 @@ static void nested_0164e660(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e660(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e660((undefined8 *)cursor, (long *)state);
+    nested_0164e660((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e680(long *param_1,long *param_2)
+static void nested_0164e680(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -260,20 +260,20 @@ static void nested_0164e680(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164e680(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e680((long *)cursor, (long *)state);
+    nested_0164e680((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e6a0(undefined8 *param_1,long *param_2)
+static void nested_0164e6a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -281,17 +281,17 @@ static void nested_0164e6a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e6a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e6a0((undefined8 *)cursor, (long *)state);
+    nested_0164e6a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e6c0(long *param_1,long *param_2)
+static void nested_0164e6c0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -301,26 +301,26 @@ static void nested_0164e6c0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164e6c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e6c0((long *)cursor, (long *)state);
+    nested_0164e6c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e6e0(undefined8 *param_1,long *param_2)
+static void nested_0164e6e0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -329,11 +329,11 @@ static void nested_0164e6e0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e6e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e6e0((undefined8 *)cursor, (long *)state);
+    nested_0164e6e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e710(undefined8 *param_1,long *param_2)
+static void nested_0164e710(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -341,17 +341,17 @@ static void nested_0164e710(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e710(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e710((undefined8 *)cursor, (long *)state);
+    nested_0164e710((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e730(long *param_1,long *param_2)
+static void nested_0164e730(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -360,20 +360,20 @@ static void nested_0164e730(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(byte *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(byte *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_164e730(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e730((long *)cursor, (long *)state);
+    nested_0164e730((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e760(undefined8 *param_1,long *param_2)
+static void nested_0164e760(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -381,17 +381,17 @@ static void nested_0164e760(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164e760(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e760((undefined8 *)cursor, (long *)state);
+    nested_0164e760((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e780(undefined8 *param_1,long *param_2)
+static void nested_0164e780(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -399,23 +399,23 @@ static void nested_0164e780(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e780(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e780((undefined8 *)cursor, (long *)state);
+    nested_0164e780((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e7a0(undefined8 *param_1,long *param_2)
+static void nested_0164e7a0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -424,11 +424,11 @@ static void nested_0164e7a0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e7a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e7a0((undefined8 *)cursor, (long *)state);
+    nested_0164e7a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e7d0(undefined8 *param_1,long *param_2)
+static void nested_0164e7d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -436,23 +436,23 @@ static void nested_0164e7d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e7d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e7d0((undefined8 *)cursor, (long *)state);
+    nested_0164e7d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e7f0(undefined8 *param_1,long *param_2)
+static void nested_0164e7f0(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 | *(ulong *)(*param_2 + 8 + lVar2 * 4);
@@ -460,11 +460,11 @@ static void nested_0164e7f0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e7f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e7f0((undefined8 *)cursor, (long *)state);
+    nested_0164e7f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e810(undefined8 *param_1,long *param_2)
+static void nested_0164e810(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -472,23 +472,23 @@ static void nested_0164e810(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e810(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e810((undefined8 *)cursor, (long *)state);
+    nested_0164e810((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e830(undefined8 *param_1,long *param_2)
+static void nested_0164e830(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(int *)(lVar1 + lVar2 * 4) = *(int *)(lVar1 + lVar2 * 4) / *(int *)(lVar1 + 4 + lVar2 * 4);
@@ -496,11 +496,11 @@ static void nested_0164e830(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e830(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e830((undefined8 *)cursor, (long *)state);
+    nested_0164e830((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e850(undefined8 *param_1,long *param_2)
+static void nested_0164e850(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -508,50 +508,50 @@ static void nested_0164e850(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e850(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e850((undefined8 *)cursor, (long *)state);
+    nested_0164e850((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e870(long *param_1,long *param_2)
+static void nested_0164e870(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar1 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar2 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_164e870(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e870((long *)cursor, (long *)state);
+    nested_0164e870((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e8b0(undefined8 *param_1,long *param_2)
+static void nested_0164e8b0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -560,11 +560,11 @@ static void nested_0164e8b0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e8b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e8b0((undefined8 *)cursor, (long *)state);
+    nested_0164e8b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e8e0(undefined8 *param_1,long *param_2)
+static void nested_0164e8e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -572,17 +572,17 @@ static void nested_0164e8e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e8e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e8e0((undefined8 *)cursor, (long *)state);
+    nested_0164e8e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e900(undefined8 *param_1,long *param_2)
+static void nested_0164e900(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -590,17 +590,17 @@ static void nested_0164e900(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e900(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e900((undefined8 *)cursor, (long *)state);
+    nested_0164e900((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e920(undefined8 *param_1,long *param_2)
+static void nested_0164e920(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -608,17 +608,17 @@ static void nested_0164e920(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e920(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e920((undefined8 *)cursor, (long *)state);
+    nested_0164e920((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e940(undefined8 *param_1,long *param_2)
+static void nested_0164e940(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -626,23 +626,23 @@ static void nested_0164e940(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164e940(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e940((undefined8 *)cursor, (long *)state);
+    nested_0164e940((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e960(undefined8 *param_1,long *param_2)
+static void nested_0164e960(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 | *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -650,11 +650,11 @@ static void nested_0164e960(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164e960(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e960((undefined8 *)cursor, (long *)state);
+    nested_0164e960((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e980(undefined8 *param_1,long *param_2)
+static void nested_0164e980(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -662,44 +662,44 @@ static void nested_0164e980(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164e980(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e980((undefined8 *)cursor, (long *)state);
+    nested_0164e980((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e9a0(long *param_1,long *param_2)
+static void nested_0164e9a0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar2 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar1 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_164e9a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e9a0((long *)cursor, (long *)state);
+    nested_0164e9a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164e9e0(undefined8 *param_1,long *param_2)
+static void nested_0164e9e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -707,17 +707,17 @@ static void nested_0164e9e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164e9e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164e9e0((undefined8 *)cursor, (long *)state);
+    nested_0164e9e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ea00(long *param_1,long *param_2)
+static void nested_0164ea00(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -726,20 +726,20 @@ static void nested_0164ea00(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(int *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(int *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_164ea00(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ea00((long *)cursor, (long *)state);
+    nested_0164ea00((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ea30(undefined8 *param_1,long *param_2)
+static void nested_0164ea30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -747,17 +747,17 @@ static void nested_0164ea30(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ea30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ea30((undefined8 *)cursor, (long *)state);
+    nested_0164ea30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ea50(undefined8 *param_1,long *param_2)
+static void nested_0164ea50(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -765,17 +765,17 @@ static void nested_0164ea50(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ea50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ea50((undefined8 *)cursor, (long *)state);
+    nested_0164ea50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ea70(long *param_1,long *param_2)
+static void nested_0164ea70(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -785,28 +785,28 @@ static void nested_0164ea70(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164ea70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ea70((long *)cursor, (long *)state);
+    nested_0164ea70((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ea90(undefined8 *param_1,long *param_2)
+static void nested_0164ea90(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -820,18 +820,18 @@ static void nested_0164ea90(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ea90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ea90((undefined8 *)cursor, (long *)state);
+    nested_0164ea90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ead0(undefined8 *param_1,long *param_2)
+static void nested_0164ead0(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 8 + lVar3 * 4) & 0x3f;
@@ -840,11 +840,11 @@ static void nested_0164ead0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ead0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ead0((undefined8 *)cursor, (long *)state);
+    nested_0164ead0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eb10(undefined8 *param_1,long *param_2)
+static void nested_0164eb10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -852,17 +852,17 @@ static void nested_0164eb10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164eb10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eb10((undefined8 *)cursor, (long *)state);
+    nested_0164eb10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eb30(undefined8 *param_1,long *param_2)
+static void nested_0164eb30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -870,17 +870,17 @@ static void nested_0164eb30(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164eb30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eb30((undefined8 *)cursor, (long *)state);
+    nested_0164eb30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eb50(long *param_1,long *param_2)
+static void nested_0164eb50(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -890,20 +890,20 @@ static void nested_0164eb50(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164eb50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eb50((long *)cursor, (long *)state);
+    nested_0164eb50((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eb70(undefined8 *param_1,long *param_2)
+static void nested_0164eb70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -911,17 +911,17 @@ static void nested_0164eb70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164eb70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eb70((undefined8 *)cursor, (long *)state);
+    nested_0164eb70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eb90(undefined8 *param_1,long *param_2)
+static void nested_0164eb90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -929,42 +929,42 @@ static void nested_0164eb90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164eb90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eb90((undefined8 *)cursor, (long *)state);
+    nested_0164eb90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ebb0(undefined8 *param_1,long *param_2)
+static void nested_0164ebb0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + 8 + lVar2 * 4) <= *(long *)(lVar1 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + 8 + lVar2 * 4) <= *(int64_t *)(lVar1 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_164ebb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ebb0((undefined8 *)cursor, (long *)state);
+    nested_0164ebb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ebe0(undefined8 *param_1,long *param_2)
+static void nested_0164ebe0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -973,11 +973,11 @@ static void nested_0164ebe0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ebe0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ebe0((undefined8 *)cursor, (long *)state);
+    nested_0164ebe0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ec10(undefined8 *param_1,long *param_2)
+static void nested_0164ec10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -985,42 +985,42 @@ static void nested_0164ec10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ec10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ec10((undefined8 *)cursor, (long *)state);
+    nested_0164ec10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ec30(undefined8 *param_1,long *param_2)
+static void nested_0164ec30(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) <= *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) <= *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_164ec30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ec30((undefined8 *)cursor, (long *)state);
+    nested_0164ec30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ec60(undefined8 *param_1,long *param_2)
+static void nested_0164ec60(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 & *(ulong *)(*param_2 + 8 + lVar2 * 4);
@@ -1028,11 +1028,11 @@ static void nested_0164ec60(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ec60(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ec60((undefined8 *)cursor, (long *)state);
+    nested_0164ec60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ec80(undefined8 *param_1,long *param_2)
+static void nested_0164ec80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1040,30 +1040,30 @@ static void nested_0164ec80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ec80(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ec80((undefined8 *)cursor, (long *)state);
+    nested_0164ec80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eca0(long *param_1,long *param_2)
+static void nested_0164eca0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -1072,11 +1072,11 @@ static void nested_0164eca0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_164eca0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eca0((long *)cursor, (long *)state);
+    nested_0164eca0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ece0(long *param_1,long *param_2)
+static void nested_0164ece0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -1085,20 +1085,20 @@ static void nested_0164ece0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined1 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined1 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164ece0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ece0((long *)cursor, (long *)state);
+    nested_0164ece0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ed10(undefined8 *param_1,long *param_2)
+static void nested_0164ed10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1106,17 +1106,17 @@ static void nested_0164ed10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164ed10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ed10((undefined8 *)cursor, (long *)state);
+    nested_0164ed10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ed30(undefined8 *param_1,long *param_2)
+static void nested_0164ed30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1124,17 +1124,17 @@ static void nested_0164ed30(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ed30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ed30((undefined8 *)cursor, (long *)state);
+    nested_0164ed30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ed50(undefined8 *param_1,long *param_2)
+static void nested_0164ed50(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1142,24 +1142,24 @@ static void nested_0164ed50(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ed50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ed50((undefined8 *)cursor, (long *)state);
+    nested_0164ed50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ed70(undefined8 *param_1,long *param_2)
+static void nested_0164ed70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 4 + lVar3 * 4) & 0x1f;
@@ -1168,11 +1168,11 @@ static void nested_0164ed70(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ed70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ed70((undefined8 *)cursor, (long *)state);
+    nested_0164ed70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ed90(undefined8 *param_1,long *param_2)
+static void nested_0164ed90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1180,17 +1180,17 @@ static void nested_0164ed90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ed90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ed90((undefined8 *)cursor, (long *)state);
+    nested_0164ed90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164edb0(undefined8 *param_1,long *param_2)
+static void nested_0164edb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1198,17 +1198,17 @@ static void nested_0164edb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164edb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164edb0((undefined8 *)cursor, (long *)state);
+    nested_0164edb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164edd0(undefined8 *param_1,long *param_2)
+static void nested_0164edd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1216,23 +1216,23 @@ static void nested_0164edd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164edd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164edd0((undefined8 *)cursor, (long *)state);
+    nested_0164edd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164edf0(undefined8 *param_1,long *param_2)
+static void nested_0164edf0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(undefined4 *)(lVar1 + lVar2 * 4) =
@@ -1241,11 +1241,11 @@ static void nested_0164edf0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164edf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164edf0((undefined8 *)cursor, (long *)state);
+    nested_0164edf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ee20(undefined8 *param_1,long *param_2)
+static void nested_0164ee20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1253,17 +1253,17 @@ static void nested_0164ee20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ee20(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ee20((undefined8 *)cursor, (long *)state);
+    nested_0164ee20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ee40(undefined8 *param_1,long *param_2)
+static void nested_0164ee40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1271,17 +1271,17 @@ static void nested_0164ee40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164ee40(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ee40((undefined8 *)cursor, (long *)state);
+    nested_0164ee40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ee60(long *param_1,long *param_2)
+static void nested_0164ee60(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -1292,23 +1292,23 @@ static void nested_0164ee60(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar2 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar2 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_164ee60(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ee60((long *)cursor, (long *)state);
+    nested_0164ee60((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eea0(undefined8 *param_1,long *param_2)
+static void nested_0164eea0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1316,17 +1316,17 @@ static void nested_0164eea0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164eea0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eea0((undefined8 *)cursor, (long *)state);
+    nested_0164eea0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eec0(undefined8 *param_1,long *param_2)
+static void nested_0164eec0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1334,39 +1334,39 @@ static void nested_0164eec0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164eec0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eec0((undefined8 *)cursor, (long *)state);
+    nested_0164eec0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164eee0(undefined8 *param_1,long *param_2)
+static void nested_0164eee0(undefined8 *param_1,int64_t *param_2)
 
 {
   short sVar1;
   
   sVar1 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = *(undefined4 *)param_2[3];
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = *(undefined4 *)param_2[3];
   return;
 }
 
 static uintptr_t run_164eee0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164eee0((undefined8 *)cursor, (long *)state);
+    nested_0164eee0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ef00(undefined8 *param_1,long *param_2)
+static void nested_0164ef00(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 >> (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -1374,11 +1374,11 @@ static void nested_0164ef00(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ef00(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ef00((undefined8 *)cursor, (long *)state);
+    nested_0164ef00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ef20(undefined8 *param_1,long *param_2)
+static void nested_0164ef20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1386,17 +1386,17 @@ static void nested_0164ef20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164ef20(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ef20((undefined8 *)cursor, (long *)state);
+    nested_0164ef20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ef40(long *param_1,long *param_2)
+static void nested_0164ef40(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -1406,20 +1406,20 @@ static void nested_0164ef40(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164ef40(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ef40((long *)cursor, (long *)state);
+    nested_0164ef40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ef60(undefined8 *param_1,long *param_2)
+static void nested_0164ef60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1427,41 +1427,41 @@ static void nested_0164ef60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ef60(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ef60((undefined8 *)cursor, (long *)state);
+    nested_0164ef60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ef80(long *param_1,long *param_2)
+static void nested_0164ef80(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
+  int64_t lVar4;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  lVar4 = *(long *)(psVar3 + 3);
-  *param_1 = (uintptr_t)((long)(psVar3 + 7));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) = (ulong)*(uint *)(param_2 + 2) * (ulong)uVar2 + lVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  lVar4 = *(int64_t *)(psVar3 + 3);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 7));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) = (ulong)*(uint *)(param_2 + 2) * (ulong)uVar2 + lVar4;
   return;
 }
 
 static uintptr_t run_164ef80(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ef80((long *)cursor, (long *)state);
+    nested_0164ef80((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164efc0(undefined8 *param_1,long *param_2)
+static void nested_0164efc0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1469,17 +1469,17 @@ static void nested_0164efc0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164efc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164efc0((undefined8 *)cursor, (long *)state);
+    nested_0164efc0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164efe0(undefined8 *param_1,long *param_2)
+static void nested_0164efe0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1487,17 +1487,17 @@ static void nested_0164efe0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164efe0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164efe0((undefined8 *)cursor, (long *)state);
+    nested_0164efe0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f000(undefined8 *param_1,long *param_2)
+static void nested_0164f000(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1505,17 +1505,17 @@ static void nested_0164f000(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f000(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f000((undefined8 *)cursor, (long *)state);
+    nested_0164f000((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f020(undefined8 *param_1,long *param_2)
+static void nested_0164f020(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1523,17 +1523,17 @@ static void nested_0164f020(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f020(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f020((undefined8 *)cursor, (long *)state);
+    nested_0164f020((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f040(undefined8 *param_1,long *param_2)
+static void nested_0164f040(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1541,17 +1541,17 @@ static void nested_0164f040(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f040(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f040((undefined8 *)cursor, (long *)state);
+    nested_0164f040((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f060(undefined8 *param_1,long *param_2)
+static void nested_0164f060(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1559,17 +1559,17 @@ static void nested_0164f060(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f060(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f060((undefined8 *)cursor, (long *)state);
+    nested_0164f060((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f080(undefined8 *param_1,long *param_2)
+static void nested_0164f080(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1577,17 +1577,17 @@ static void nested_0164f080(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f080(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f080((undefined8 *)cursor, (long *)state);
+    nested_0164f080((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f0a0(long *param_1,long *param_2)
+static void nested_0164f0a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -1597,20 +1597,20 @@ static void nested_0164f0a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f0a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f0a0((long *)cursor, (long *)state);
+    nested_0164f0a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f0c0(undefined8 *param_1,long *param_2)
+static void nested_0164f0c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1618,17 +1618,17 @@ static void nested_0164f0c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f0c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f0c0((undefined8 *)cursor, (long *)state);
+    nested_0164f0c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f0e0(long *param_1,long *param_2)
+static void nested_0164f0e0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -1637,20 +1637,20 @@ static void nested_0164f0e0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined4 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined4 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164f0e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f0e0((long *)cursor, (long *)state);
+    nested_0164f0e0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f110(undefined8 *param_1,long *param_2)
+static void nested_0164f110(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1658,25 +1658,25 @@ static void nested_0164f110(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f110(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f110((undefined8 *)cursor, (long *)state);
+    nested_0164f110((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_0164f130(undefined8 *param_1,long *param_2)
+static ulong nested_0164f130(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -1690,26 +1690,26 @@ static ulong nested_0164f130(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164f130(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_0164f130((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_0164f130((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_0164f170(undefined8 *param_1,long *param_2)
+static void nested_0164f170(undefined8 *param_1,int64_t *param_2)
 
 {
   short sVar1;
   
   sVar1 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(undefined4 *)param_2[3] = *(undefined4 *)(*param_2 + (long)sVar1 * 4);
+  *(undefined4 *)param_2[3] = *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164f170(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f170((undefined8 *)cursor, (long *)state);
+    nested_0164f170((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f190(long *param_1,long *param_2)
+static void nested_0164f190(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -1719,20 +1719,20 @@ static void nested_0164f190(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f190(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f190((long *)cursor, (long *)state);
+    nested_0164f190((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f1b0(undefined8 *param_1,long *param_2)
+static void nested_0164f1b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1740,54 +1740,54 @@ static void nested_0164f1b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f1b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f1b0((undefined8 *)cursor, (long *)state);
+    nested_0164f1b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f1d0(undefined8 *param_1,long *param_2)
+static void nested_0164f1d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) < *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) < *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_164f1d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f1d0((undefined8 *)cursor, (long *)state);
+    nested_0164f1d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f200(undefined8 *param_1,long *param_2)
+static void nested_0164f200(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
-  *plVar1 = *plVar1 + *(long *)(*param_2 + 8 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
+  *plVar1 = *plVar1 + *(int64_t *)(*param_2 + 8 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_164f200(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f200((undefined8 *)cursor, (long *)state);
+    nested_0164f200((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f220(undefined8 *param_1,long *param_2)
+static void nested_0164f220(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1795,17 +1795,17 @@ static void nested_0164f220(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f220(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f220((undefined8 *)cursor, (long *)state);
+    nested_0164f220((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f240(long *param_1,long *param_2)
+static void nested_0164f240(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -1814,20 +1814,20 @@ static void nested_0164f240(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined8 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined8 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164f240(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f240((long *)cursor, (long *)state);
+    nested_0164f240((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f270(undefined8 *param_1,long *param_2)
+static void nested_0164f270(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1835,17 +1835,17 @@ static void nested_0164f270(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f270(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f270((undefined8 *)cursor, (long *)state);
+    nested_0164f270((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f290(undefined8 *param_1,long *param_2)
+static void nested_0164f290(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1853,17 +1853,17 @@ static void nested_0164f290(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f290(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f290((undefined8 *)cursor, (long *)state);
+    nested_0164f290((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f2b0(undefined8 *param_1,long *param_2)
+static void nested_0164f2b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1871,17 +1871,17 @@ static void nested_0164f2b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f2b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f2b0((undefined8 *)cursor, (long *)state);
+    nested_0164f2b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f2d0(undefined8 *param_1,long *param_2)
+static void nested_0164f2d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1889,17 +1889,17 @@ static void nested_0164f2d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f2d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f2d0((undefined8 *)cursor, (long *)state);
+    nested_0164f2d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f2f0(undefined8 *param_1,long *param_2)
+static void nested_0164f2f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1907,17 +1907,17 @@ static void nested_0164f2f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f2f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f2f0((undefined8 *)cursor, (long *)state);
+    nested_0164f2f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f310(long *param_1,long *param_2)
+static void nested_0164f310(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -1927,20 +1927,20 @@ static void nested_0164f310(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f310(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f310((long *)cursor, (long *)state);
+    nested_0164f310((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f330(long *param_1,long *param_2)
+static void nested_0164f330(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -1950,47 +1950,47 @@ static void nested_0164f330(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f330(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f330((long *)cursor, (long *)state);
+    nested_0164f330((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f350(long *param_1,long *param_2)
+static void nested_0164f350(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar2 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar1 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_164f350(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f350((long *)cursor, (long *)state);
+    nested_0164f350((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f390(undefined8 *param_1,long *param_2)
+static void nested_0164f390(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -1998,17 +1998,17 @@ static void nested_0164f390(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f390(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f390((undefined8 *)cursor, (long *)state);
+    nested_0164f390((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f3b0(long *param_1,long *param_2)
+static void nested_0164f3b0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2018,20 +2018,20 @@ static void nested_0164f3b0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f3b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f3b0((long *)cursor, (long *)state);
+    nested_0164f3b0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f3d0(undefined8 *param_1,long *param_2)
+static void nested_0164f3d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2039,17 +2039,17 @@ static void nested_0164f3d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f3d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f3d0((undefined8 *)cursor, (long *)state);
+    nested_0164f3d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f3f0(long *param_1,long *param_2)
+static void nested_0164f3f0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2060,23 +2060,23 @@ static void nested_0164f3f0(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_164f3f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f3f0((long *)cursor, (long *)state);
+    nested_0164f3f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f450(undefined8 *param_1,long *param_2)
+static void nested_0164f450(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2084,23 +2084,23 @@ static void nested_0164f450(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f450(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f450((undefined8 *)cursor, (long *)state);
+    nested_0164f450((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f470(undefined8 *param_1,long *param_2)
+static void nested_0164f470(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -2109,11 +2109,11 @@ static void nested_0164f470(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164f470(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f470((undefined8 *)cursor, (long *)state);
+    nested_0164f470((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f4a0(undefined8 *param_1,long *param_2)
+static void nested_0164f4a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2121,17 +2121,17 @@ static void nested_0164f4a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f4a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f4a0((undefined8 *)cursor, (long *)state);
+    nested_0164f4a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f4c0(undefined8 *param_1,long *param_2)
+static void nested_0164f4c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2139,17 +2139,17 @@ static void nested_0164f4c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f4c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f4c0((undefined8 *)cursor, (long *)state);
+    nested_0164f4c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f4e0(long *param_1,long *param_2)
+static void nested_0164f4e0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2158,20 +2158,20 @@ static void nested_0164f4e0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(uint *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(uint *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_164f4e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f4e0((long *)cursor, (long *)state);
+    nested_0164f4e0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f510(undefined8 *param_1,long *param_2)
+static void nested_0164f510(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2179,17 +2179,17 @@ static void nested_0164f510(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f510(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f510((undefined8 *)cursor, (long *)state);
+    nested_0164f510((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f530(undefined8 *param_1,long *param_2)
+static void nested_0164f530(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2197,17 +2197,17 @@ static void nested_0164f530(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f530(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f530((undefined8 *)cursor, (long *)state);
+    nested_0164f530((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f550(undefined8 *param_1,long *param_2)
+static void nested_0164f550(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2215,23 +2215,23 @@ static void nested_0164f550(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f550(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f550((undefined8 *)cursor, (long *)state);
+    nested_0164f550((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f570(undefined8 *param_1,long *param_2)
+static void nested_0164f570(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -2240,11 +2240,11 @@ static void nested_0164f570(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164f570(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f570((undefined8 *)cursor, (long *)state);
+    nested_0164f570((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f5a0(undefined8 *param_1,long *param_2)
+static void nested_0164f5a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2252,17 +2252,17 @@ static void nested_0164f5a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f5a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f5a0((undefined8 *)cursor, (long *)state);
+    nested_0164f5a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f5c0(long *param_1,long *param_2)
+static void nested_0164f5c0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2272,33 +2272,33 @@ static void nested_0164f5c0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f5c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f5c0((long *)cursor, (long *)state);
+    nested_0164f5c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f5e0(long *param_1,long *param_2)
+static void nested_0164f5e0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -2307,11 +2307,11 @@ static void nested_0164f5e0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_164f5e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f5e0((long *)cursor, (long *)state);
+    nested_0164f5e0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f620(undefined8 *param_1,long *param_2)
+static void nested_0164f620(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2319,17 +2319,17 @@ static void nested_0164f620(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f620(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f620((undefined8 *)cursor, (long *)state);
+    nested_0164f620((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f640(undefined8 *param_1,long *param_2)
+static void nested_0164f640(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2337,17 +2337,17 @@ static void nested_0164f640(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f640(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f640((undefined8 *)cursor, (long *)state);
+    nested_0164f640((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f660(undefined8 *param_1,long *param_2)
+static void nested_0164f660(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2355,38 +2355,38 @@ static void nested_0164f660(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f660(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f660((undefined8 *)cursor, (long *)state);
+    nested_0164f660((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_0164f680(undefined8 *param_1,long *param_2)
+static ulong nested_0164f680(undefined8 *param_1,int64_t *param_2)
 
 {
   int iVar1;
   int iVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   iVar1 = *(int *)(lVar3 + lVar4 * 4);
   iVar2 = *(int *)(lVar3 + 4 + lVar4 * 4);
   *(int *)(lVar3 + lVar4 * 4) = iVar1 % iVar2;
-  return (long)iVar1 / (long)iVar2 & 0xffffffff;
+  return (int64_t)iVar1 / (int64_t)iVar2 & 0xffffffff;
 }
 
 static uintptr_t run_164f680(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_0164f680((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_0164f680((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_0164f6a0(undefined8 *param_1,long *param_2)
+static void nested_0164f6a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2394,17 +2394,17 @@ static void nested_0164f6a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f6a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f6a0((undefined8 *)cursor, (long *)state);
+    nested_0164f6a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f6c0(undefined8 *param_1,long *param_2)
+static void nested_0164f6c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2412,17 +2412,17 @@ static void nested_0164f6c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f6c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f6c0((undefined8 *)cursor, (long *)state);
+    nested_0164f6c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f6e0(undefined8 *param_1,long *param_2)
+static void nested_0164f6e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2430,17 +2430,17 @@ static void nested_0164f6e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f6e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f6e0((undefined8 *)cursor, (long *)state);
+    nested_0164f6e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f700(long *param_1,long *param_2)
+static void nested_0164f700(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2450,20 +2450,20 @@ static void nested_0164f700(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f700(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f700((long *)cursor, (long *)state);
+    nested_0164f700((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f720(undefined8 *param_1,long *param_2)
+static void nested_0164f720(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2471,17 +2471,17 @@ static void nested_0164f720(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f720(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f720((undefined8 *)cursor, (long *)state);
+    nested_0164f720((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f740(undefined8 *param_1,long *param_2)
+static void nested_0164f740(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2489,36 +2489,36 @@ static void nested_0164f740(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f740(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f740((undefined8 *)cursor, (long *)state);
+    nested_0164f740((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f760(undefined8 *param_1,long *param_2)
+static void nested_0164f760(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) == *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) == *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_164f760(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f760((undefined8 *)cursor, (long *)state);
+    nested_0164f760((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f790(long *param_1,long *param_2)
+static void nested_0164f790(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2528,21 +2528,21 @@ static void nested_0164f790(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar1 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   uVar2 = psVar4[1];
-  *param_1 = (uintptr_t)((long)(psVar4 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 2));
   iVar3 = *(int *)(psVar4 + 2);
-  *param_1 = (uintptr_t)((long)(psVar4 + 4));
-  *(uint *)(*param_2 + (long)sVar1 * 4) = (uint)uVar2 * (int)param_2[2] + iVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 4));
+  *(uint *)(*param_2 + (int64_t)sVar1 * 4) = (uint)uVar2 * (int)param_2[2] + iVar3;
   return;
 }
 
 static uintptr_t run_164f790(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f790((long *)cursor, (long *)state);
+    nested_0164f790((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f7d0(undefined8 *param_1,long *param_2)
+static void nested_0164f7d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2550,17 +2550,17 @@ static void nested_0164f7d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f7d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f7d0((undefined8 *)cursor, (long *)state);
+    nested_0164f7d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f810(long *param_1,long *param_2)
+static void nested_0164f810(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2570,20 +2570,20 @@ static void nested_0164f810(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f810(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f810((long *)cursor, (long *)state);
+    nested_0164f810((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f850(undefined8 *param_1,long *param_2)
+static void nested_0164f850(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2591,25 +2591,25 @@ static void nested_0164f850(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f850(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f850((undefined8 *)cursor, (long *)state);
+    nested_0164f850((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_0164f870(undefined8 *param_1,long *param_2)
+static ulong nested_0164f870(undefined8 *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   uVar1 = *(uint *)(lVar3 + lVar4 * 4);
@@ -2619,10 +2619,10 @@ static ulong nested_0164f870(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164f870(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_0164f870((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_0164f870((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_0164f890(long *param_1,long *param_2)
+static void nested_0164f890(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2632,20 +2632,20 @@ static void nested_0164f890(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f890(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f890((long *)cursor, (long *)state);
+    nested_0164f890((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f8d0(long *param_1,long *param_2)
+static void nested_0164f8d0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2654,20 +2654,20 @@ static void nested_0164f8d0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_164f8d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f8d0((long *)cursor, (long *)state);
+    nested_0164f8d0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f900(long *param_1)
+static void nested_0164f900(int64_t *param_1)
 
 {
   *param_1 = (uintptr_t)(*param_1 + 2);
@@ -2676,11 +2676,11 @@ static void nested_0164f900(long *param_1)
 
 static uintptr_t run_164f900(uintptr_t *cursor, uintptr_t *state) {
     (void)state;
-    nested_0164f900((long *)cursor);
+    nested_0164f900((int64_t *)cursor);
     return 0;
 }
 
-static void nested_0164f910(undefined8 *param_1,long *param_2)
+static void nested_0164f910(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2688,17 +2688,17 @@ static void nested_0164f910(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f910(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f910((undefined8 *)cursor, (long *)state);
+    nested_0164f910((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f930(undefined8 *param_1,long *param_2)
+static void nested_0164f930(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2706,17 +2706,17 @@ static void nested_0164f930(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f930(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f930((undefined8 *)cursor, (long *)state);
+    nested_0164f930((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f950(undefined8 *param_1,long *param_2)
+static void nested_0164f950(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2724,17 +2724,17 @@ static void nested_0164f950(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164f950(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f950((undefined8 *)cursor, (long *)state);
+    nested_0164f950((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f970(undefined8 *param_1,long *param_2)
+static void nested_0164f970(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2742,17 +2742,17 @@ static void nested_0164f970(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164f970(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f970((undefined8 *)cursor, (long *)state);
+    nested_0164f970((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f990(undefined8 *param_1,long *param_2)
+static void nested_0164f990(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2760,23 +2760,23 @@ static void nested_0164f990(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f990(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f990((undefined8 *)cursor, (long *)state);
+    nested_0164f990((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f9b0(undefined8 *param_1,long *param_2)
+static void nested_0164f9b0(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 - *(int *)(*param_2 + 4 + lVar2 * 4);
@@ -2784,11 +2784,11 @@ static void nested_0164f9b0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164f9b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f9b0((undefined8 *)cursor, (long *)state);
+    nested_0164f9b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f9d0(undefined8 *param_1,long *param_2)
+static void nested_0164f9d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2796,17 +2796,17 @@ static void nested_0164f9d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164f9d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f9d0((undefined8 *)cursor, (long *)state);
+    nested_0164f9d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164f9f0(long *param_1,long *param_2)
+static void nested_0164f9f0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -2816,20 +2816,20 @@ static void nested_0164f9f0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164f9f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164f9f0((long *)cursor, (long *)state);
+    nested_0164f9f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fa10(long *param_1,long *param_2)
+static void nested_0164fa10(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2838,20 +2838,20 @@ static void nested_0164fa10(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_164fa10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fa10((long *)cursor, (long *)state);
+    nested_0164fa10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fa40(long *param_1,long *param_2)
+static void nested_0164fa40(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2860,28 +2860,28 @@ static void nested_0164fa40(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined1 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined1 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164fa40(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fa40((long *)cursor, (long *)state);
+    nested_0164fa40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fa70(undefined8 *param_1,long *param_2)
+static void nested_0164fa70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   uVar1 = *(uint *)(lVar3 + lVar4 * 4);
@@ -2891,29 +2891,29 @@ static void nested_0164fa70(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164fa70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fa70((undefined8 *)cursor, (long *)state);
+    nested_0164fa70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164faa0(undefined8 *param_1,long *param_2)
+static void nested_0164faa0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
   *plVar1 = *plVar1 >> (*(byte *)(*param_2 + 8 + lVar2 * 4) & 0x3f);
   return;
 }
 
 static uintptr_t run_164faa0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164faa0((undefined8 *)cursor, (long *)state);
+    nested_0164faa0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fac0(undefined8 *param_1,long *param_2)
+static void nested_0164fac0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2921,17 +2921,17 @@ static void nested_0164fac0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fac0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fac0((undefined8 *)cursor, (long *)state);
+    nested_0164fac0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fae0(long *param_1,long *param_2)
+static void nested_0164fae0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -2942,23 +2942,23 @@ static void nested_0164fae0(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_164fae0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fae0((long *)cursor, (long *)state);
+    nested_0164fae0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fb20(undefined8 *param_1,long *param_2)
+static void nested_0164fb20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -2966,33 +2966,33 @@ static void nested_0164fb20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164fb20(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fb20((undefined8 *)cursor, (long *)state);
+    nested_0164fb20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fb40(undefined8 *param_1,long *param_2)
+static void nested_0164fb40(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(ulong *)(*param_2 + lVar1 * 4) = (ulong)*(uint *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_164fb40(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fb40((undefined8 *)cursor, (long *)state);
+    nested_0164fb40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fb60(long *param_1,long *param_2)
+static void nested_0164fb60(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -3001,20 +3001,20 @@ static void nested_0164fb60(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164fb60(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fb60((long *)cursor, (long *)state);
+    nested_0164fb60((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fb90(undefined8 *param_1,long *param_2)
+static void nested_0164fb90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3022,17 +3022,17 @@ static void nested_0164fb90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fb90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fb90((undefined8 *)cursor, (long *)state);
+    nested_0164fb90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fbb0(undefined8 *param_1,long *param_2)
+static void nested_0164fbb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3040,35 +3040,35 @@ static void nested_0164fbb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fbb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fbb0((undefined8 *)cursor, (long *)state);
+    nested_0164fbb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fbd0(undefined8 *param_1,long *param_2)
+static void nested_0164fbd0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
   *plVar1 = *plVar1 << (*(byte *)(*param_2 + 8 + lVar2 * 4) & 0x3f);
   return;
 }
 
 static uintptr_t run_164fbd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fbd0((undefined8 *)cursor, (long *)state);
+    nested_0164fbd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fbf0(undefined8 *param_1,long *param_2)
+static void nested_0164fbf0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3076,17 +3076,17 @@ static void nested_0164fbf0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164fbf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fbf0((undefined8 *)cursor, (long *)state);
+    nested_0164fbf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fc10(long *param_1,long *param_2)
+static void nested_0164fc10(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3096,20 +3096,20 @@ static void nested_0164fc10(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164fc10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fc10((long *)cursor, (long *)state);
+    nested_0164fc10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fc30(long *param_1,long *param_2)
+static void nested_0164fc30(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3119,26 +3119,26 @@ static void nested_0164fc30(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164fc30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fc30((long *)cursor, (long *)state);
+    nested_0164fc30((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fc50(undefined8 *param_1,long *param_2)
+static void nested_0164fc50(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) = *(uint *)(lVar1 + lVar2 * 4) / *(uint *)(lVar1 + 4 + lVar2 * 4);
@@ -3146,17 +3146,17 @@ static void nested_0164fc50(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164fc50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fc50((undefined8 *)cursor, (long *)state);
+    nested_0164fc50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fc70(undefined8 *param_1,long *param_2)
+static void nested_0164fc70(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -3165,11 +3165,11 @@ static void nested_0164fc70(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164fc70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fc70((undefined8 *)cursor, (long *)state);
+    nested_0164fc70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fca0(long *param_1,long *param_2)
+static void nested_0164fca0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -3178,20 +3178,20 @@ static void nested_0164fca0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined4 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined4 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_164fca0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fca0((long *)cursor, (long *)state);
+    nested_0164fca0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fcd0(undefined8 *param_1,long *param_2)
+static void nested_0164fcd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3199,17 +3199,17 @@ static void nested_0164fcd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fcd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fcd0((undefined8 *)cursor, (long *)state);
+    nested_0164fcd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fcf0(undefined8 *param_1,long *param_2)
+static void nested_0164fcf0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3217,17 +3217,17 @@ static void nested_0164fcf0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fcf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fcf0((undefined8 *)cursor, (long *)state);
+    nested_0164fcf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fd40(undefined8 *param_1,long *param_2)
+static void nested_0164fd40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3235,17 +3235,17 @@ static void nested_0164fd40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164fd40(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fd40((undefined8 *)cursor, (long *)state);
+    nested_0164fd40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fd60(undefined8 *param_1,long *param_2)
+static void nested_0164fd60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3253,23 +3253,23 @@ static void nested_0164fd60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164fd60(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fd60((undefined8 *)cursor, (long *)state);
+    nested_0164fd60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fd80(undefined8 *param_1,long *param_2)
+static void nested_0164fd80(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -3278,11 +3278,11 @@ static void nested_0164fd80(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164fd80(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fd80((undefined8 *)cursor, (long *)state);
+    nested_0164fd80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fdb0(undefined8 *param_1,long *param_2)
+static void nested_0164fdb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3290,17 +3290,17 @@ static void nested_0164fdb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164fdb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fdb0((undefined8 *)cursor, (long *)state);
+    nested_0164fdb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fdd0(undefined8 *param_1,long *param_2)
+static void nested_0164fdd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3308,33 +3308,33 @@ static void nested_0164fdd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164fdd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fdd0((undefined8 *)cursor, (long *)state);
+    nested_0164fdd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fdf0(undefined8 *param_1,long *param_2)
+static void nested_0164fdf0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(long *)(*param_2 + lVar1 * 4) == 0);
+  *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(int64_t *)(*param_2 + lVar1 * 4) == 0);
   return;
 }
 
 static uintptr_t run_164fdf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fdf0((undefined8 *)cursor, (long *)state);
+    nested_0164fdf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fe10(undefined8 *param_1,long *param_2)
+static void nested_0164fe10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3342,17 +3342,17 @@ static void nested_0164fe10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fe10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fe10((undefined8 *)cursor, (long *)state);
+    nested_0164fe10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fe30(long *param_1,long *param_2)
+static void nested_0164fe30(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3362,20 +3362,20 @@ static void nested_0164fe30(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164fe30(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fe30((long *)cursor, (long *)state);
+    nested_0164fe30((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fe50(undefined8 *param_1,long *param_2)
+static void nested_0164fe50(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3383,17 +3383,17 @@ static void nested_0164fe50(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164fe50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fe50((undefined8 *)cursor, (long *)state);
+    nested_0164fe50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fe70(undefined8 *param_1,long *param_2)
+static void nested_0164fe70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3401,17 +3401,17 @@ static void nested_0164fe70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164fe70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fe70((undefined8 *)cursor, (long *)state);
+    nested_0164fe70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fe90(long *param_1,long *param_2)
+static void nested_0164fe90(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3421,33 +3421,33 @@ static void nested_0164fe90(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164fe90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fe90((long *)cursor, (long *)state);
+    nested_0164fe90((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164feb0(long *param_1,long *param_2)
+static void nested_0164feb0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -3457,11 +3457,11 @@ static void nested_0164feb0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_164feb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164feb0((long *)cursor, (long *)state);
+    nested_0164feb0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fef0(undefined8 *param_1,long *param_2)
+static void nested_0164fef0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3469,25 +3469,25 @@ static void nested_0164fef0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_164fef0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fef0((undefined8 *)cursor, (long *)state);
+    nested_0164fef0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ff10(undefined8 *param_1,long *param_2)
+static void nested_0164ff10(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -3496,22 +3496,22 @@ static void nested_0164ff10(undefined8 *param_1,long *param_2)
     *(ulong *)(lVar1 + lVar4 * 4) = (uVar2 & 0xffffffff) / (uVar3 & 0xffffffff);
     return;
   }
-  *(long *)(lVar1 + lVar4 * 4) = (long)uVar2 / (long)uVar3;
+  *(int64_t *)(lVar1 + lVar4 * 4) = (int64_t)uVar2 / (int64_t)uVar3;
   return;
 }
 
 static uintptr_t run_164ff10(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ff10((undefined8 *)cursor, (long *)state);
+    nested_0164ff10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ff50(undefined8 *param_1,long *param_2)
+static void nested_0164ff50(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 << (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -3519,11 +3519,11 @@ static void nested_0164ff50(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_164ff50(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ff50((undefined8 *)cursor, (long *)state);
+    nested_0164ff50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ff70(undefined8 *param_1,long *param_2)
+static void nested_0164ff70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3531,17 +3531,17 @@ static void nested_0164ff70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ff70(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ff70((undefined8 *)cursor, (long *)state);
+    nested_0164ff70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ff90(undefined8 *param_1,long *param_2)
+static void nested_0164ff90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3549,33 +3549,33 @@ static void nested_0164ff90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_164ff90(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ff90((undefined8 *)cursor, (long *)state);
+    nested_0164ff90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ffb0(undefined8 *param_1,long *param_2)
+static void nested_0164ffb0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(int *)(*param_2 + lVar1 * 4) == 0);
   return;
 }
 
 static uintptr_t run_164ffb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ffb0((undefined8 *)cursor, (long *)state);
+    nested_0164ffb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164ffd0(undefined8 *param_1,long *param_2)
+static void nested_0164ffd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3583,17 +3583,17 @@ static void nested_0164ffd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_164ffd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164ffd0((undefined8 *)cursor, (long *)state);
+    nested_0164ffd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_0164fff0(long *param_1,long *param_2)
+static void nested_0164fff0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3603,20 +3603,20 @@ static void nested_0164fff0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_164fff0(uintptr_t *cursor, uintptr_t *state) {
-    nested_0164fff0((long *)cursor, (long *)state);
+    nested_0164fff0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650010(long *param_1,long *param_2)
+static void nested_01650010(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3626,20 +3626,20 @@ static void nested_01650010(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650010(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650010((long *)cursor, (long *)state);
+    nested_01650010((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650030(long *param_1,long *param_2)
+static void nested_01650030(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -3648,19 +3648,19 @@ static void nested_01650030(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_1650030(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650030((long *)cursor, (long *)state);
+    nested_01650030((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650050(undefined8 *param_1,long *param_2)
+static void nested_01650050(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3668,23 +3668,23 @@ static void nested_01650050(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650050(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650050((undefined8 *)cursor, (long *)state);
+    nested_01650050((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650070(undefined8 *param_1,long *param_2)
+static void nested_01650070(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 >> (*(byte *)(*param_2 + 8 + lVar2 * 4) & 0x3f);
@@ -3692,11 +3692,11 @@ static void nested_01650070(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650070(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650070((undefined8 *)cursor, (long *)state);
+    nested_01650070((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650090(undefined8 *param_1,long *param_2)
+static void nested_01650090(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3704,33 +3704,33 @@ static void nested_01650090(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650090(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650090((undefined8 *)cursor, (long *)state);
+    nested_01650090((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016500b0(undefined8 *param_1,long *param_2)
+static void nested_016500b0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(long *)(*param_2 + lVar1 * 4) = (long)*(int *)(*param_2 + lVar1 * 4);
+  *(int64_t *)(*param_2 + lVar1 * 4) = (int64_t)*(int *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_16500b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016500b0((undefined8 *)cursor, (long *)state);
+    nested_016500b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016500d0(undefined8 *param_1,long *param_2)
+static void nested_016500d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3738,17 +3738,17 @@ static void nested_016500d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16500d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016500d0((undefined8 *)cursor, (long *)state);
+    nested_016500d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016500f0(long *param_1,long *param_2)
+static void nested_016500f0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -3757,26 +3757,26 @@ static void nested_016500f0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined8 *)(*param_2 + (long)sVar1 * 4) =
-       *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined8 *)(*param_2 + (int64_t)sVar1 * 4) =
+       *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_16500f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016500f0((long *)cursor, (long *)state);
+    nested_016500f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650120(undefined8 *param_1,long *param_2)
+static void nested_01650120(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -3785,11 +3785,11 @@ static void nested_01650120(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650120(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650120((undefined8 *)cursor, (long *)state);
+    nested_01650120((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650150(undefined8 *param_1,long *param_2)
+static void nested_01650150(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3797,17 +3797,17 @@ static void nested_01650150(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650150(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650150((undefined8 *)cursor, (long *)state);
+    nested_01650150((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650170(undefined8 *param_1,long *param_2)
+static void nested_01650170(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3815,17 +3815,17 @@ static void nested_01650170(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650170(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650170((undefined8 *)cursor, (long *)state);
+    nested_01650170((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650190(undefined8 *param_1,long *param_2)
+static void nested_01650190(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3833,17 +3833,17 @@ static void nested_01650190(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650190(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650190((undefined8 *)cursor, (long *)state);
+    nested_01650190((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016501b0(undefined8 *param_1,long *param_2)
+static void nested_016501b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3851,17 +3851,17 @@ static void nested_016501b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16501b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016501b0((undefined8 *)cursor, (long *)state);
+    nested_016501b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016501d0(undefined8 *param_1,long *param_2)
+static void nested_016501d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3869,17 +3869,17 @@ static void nested_016501d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16501d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016501d0((undefined8 *)cursor, (long *)state);
+    nested_016501d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016501f0(undefined8 *param_1,long *param_2)
+static void nested_016501f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3887,17 +3887,17 @@ static void nested_016501f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16501f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016501f0((undefined8 *)cursor, (long *)state);
+    nested_016501f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650210(undefined8 *param_1,long *param_2)
+static void nested_01650210(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3905,17 +3905,17 @@ static void nested_01650210(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650210(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650210((undefined8 *)cursor, (long *)state);
+    nested_01650210((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650230(undefined8 *param_1,long *param_2)
+static void nested_01650230(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3923,17 +3923,17 @@ static void nested_01650230(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650230(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650230((undefined8 *)cursor, (long *)state);
+    nested_01650230((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650250(undefined8 *param_1,long *param_2)
+static void nested_01650250(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -3941,23 +3941,23 @@ static void nested_01650250(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650250(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650250((undefined8 *)cursor, (long *)state);
+    nested_01650250((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650270(undefined8 *param_1,long *param_2)
+static void nested_01650270(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -3966,11 +3966,11 @@ static void nested_01650270(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650270(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650270((undefined8 *)cursor, (long *)state);
+    nested_01650270((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016502a0(long *param_1,long *param_2)
+static void nested_016502a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -3980,20 +3980,20 @@ static void nested_016502a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16502a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016502a0((long *)cursor, (long *)state);
+    nested_016502a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016502c0(undefined8 *param_1,long *param_2)
+static void nested_016502c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4001,17 +4001,17 @@ static void nested_016502c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16502c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016502c0((undefined8 *)cursor, (long *)state);
+    nested_016502c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016502e0(undefined8 *param_1,long *param_2)
+static void nested_016502e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4019,25 +4019,25 @@ static void nested_016502e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16502e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016502e0((undefined8 *)cursor, (long *)state);
+    nested_016502e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650300(undefined8 *param_1,long *param_2)
+static void nested_01650300(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -4047,11 +4047,11 @@ static void nested_01650300(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650300(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650300((undefined8 *)cursor, (long *)state);
+    nested_01650300((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650330(undefined8 *param_1,long *param_2)
+static void nested_01650330(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4059,17 +4059,17 @@ static void nested_01650330(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650330(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650330((undefined8 *)cursor, (long *)state);
+    nested_01650330((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650350(undefined8 *param_1,long *param_2)
+static void nested_01650350(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4077,25 +4077,25 @@ static void nested_01650350(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650350(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650350((undefined8 *)cursor, (long *)state);
+    nested_01650350((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_01650370(undefined8 *param_1,long *param_2)
+static ulong nested_01650370(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -4104,15 +4104,15 @@ static ulong nested_01650370(undefined8 *param_1,long *param_2)
     *(ulong *)(lVar1 + lVar4 * 4) = (uVar2 & 0xffffffff) % (uVar3 & 0xffffffff);
     return (uVar2 & 0xffffffff) / (uVar3 & 0xffffffff);
   }
-  *(long *)(lVar1 + lVar4 * 4) = (long)uVar2 % (long)uVar3;
-  return (long)uVar2 / (long)uVar3;
+  *(int64_t *)(lVar1 + lVar4 * 4) = (int64_t)uVar2 % (int64_t)uVar3;
+  return (int64_t)uVar2 / (int64_t)uVar3;
 }
 
 static uintptr_t run_1650370(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_01650370((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_01650370((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_016503b0(undefined8 *param_1,long *param_2)
+static void nested_016503b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4120,24 +4120,24 @@ static void nested_016503b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16503b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016503b0((undefined8 *)cursor, (long *)state);
+    nested_016503b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016503d0(undefined8 *param_1,long *param_2)
+static void nested_016503d0(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 8 + lVar3 * 4) & 0x3f;
@@ -4146,11 +4146,11 @@ static void nested_016503d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16503d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016503d0((undefined8 *)cursor, (long *)state);
+    nested_016503d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016503f0(long *param_1,long *param_2)
+static void nested_016503f0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -4159,20 +4159,20 @@ static void nested_016503f0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(ushort *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(ushort *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_16503f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016503f0((long *)cursor, (long *)state);
+    nested_016503f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650420(undefined8 *param_1,long *param_2)
+static void nested_01650420(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4180,23 +4180,23 @@ static void nested_01650420(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650420(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650420((undefined8 *)cursor, (long *)state);
+    nested_01650420((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650440(undefined8 *param_1,long *param_2)
+static void nested_01650440(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -4205,24 +4205,24 @@ static void nested_01650440(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650440(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650440((undefined8 *)cursor, (long *)state);
+    nested_01650440((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650470(long *param_1,long *param_2)
+static void nested_01650470(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -4231,11 +4231,11 @@ static void nested_01650470(long *param_1,long *param_2)
 }
 
 static uintptr_t run_1650470(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650470((long *)cursor, (long *)state);
+    nested_01650470((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016504c0(undefined8 *param_1,long *param_2)
+static void nested_016504c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4243,17 +4243,17 @@ static void nested_016504c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16504c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016504c0((undefined8 *)cursor, (long *)state);
+    nested_016504c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016504e0(undefined8 *param_1,long *param_2)
+static void nested_016504e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4261,23 +4261,23 @@ static void nested_016504e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16504e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016504e0((undefined8 *)cursor, (long *)state);
+    nested_016504e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650500(undefined8 *param_1,long *param_2)
+static void nested_01650500(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(int *)(lVar1 + lVar2 * 4) = *(int *)(lVar1 + 4 + lVar2 * 4) * *(int *)(lVar1 + lVar2 * 4);
@@ -4285,11 +4285,11 @@ static void nested_01650500(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650500(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650500((undefined8 *)cursor, (long *)state);
+    nested_01650500((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650520(undefined8 *param_1,long *param_2)
+static void nested_01650520(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4297,17 +4297,17 @@ static void nested_01650520(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650520(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650520((undefined8 *)cursor, (long *)state);
+    nested_01650520((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650540(undefined8 *param_1,long *param_2)
+static void nested_01650540(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4315,17 +4315,17 @@ static void nested_01650540(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650540(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650540((undefined8 *)cursor, (long *)state);
+    nested_01650540((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650560(undefined8 *param_1,long *param_2)
+static void nested_01650560(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4333,17 +4333,17 @@ static void nested_01650560(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650560(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650560((undefined8 *)cursor, (long *)state);
+    nested_01650560((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650580(undefined8 *param_1,long *param_2)
+static void nested_01650580(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4351,17 +4351,17 @@ static void nested_01650580(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650580(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650580((undefined8 *)cursor, (long *)state);
+    nested_01650580((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016505a0(undefined8 *param_1,long *param_2)
+static void nested_016505a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4369,17 +4369,17 @@ static void nested_016505a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16505a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016505a0((undefined8 *)cursor, (long *)state);
+    nested_016505a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016505c0(undefined8 *param_1,long *param_2)
+static void nested_016505c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4387,17 +4387,17 @@ static void nested_016505c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16505c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016505c0((undefined8 *)cursor, (long *)state);
+    nested_016505c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016505e0(undefined8 *param_1,long *param_2)
+static void nested_016505e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4405,17 +4405,17 @@ static void nested_016505e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16505e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016505e0((undefined8 *)cursor, (long *)state);
+    nested_016505e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650600(undefined8 *param_1,long *param_2)
+static void nested_01650600(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4423,17 +4423,17 @@ static void nested_01650600(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650600(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650600((undefined8 *)cursor, (long *)state);
+    nested_01650600((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650620(undefined8 *param_1,long *param_2)
+static void nested_01650620(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4441,17 +4441,17 @@ static void nested_01650620(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650620(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650620((undefined8 *)cursor, (long *)state);
+    nested_01650620((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650640(undefined8 *param_1,long *param_2)
+static void nested_01650640(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4459,23 +4459,23 @@ static void nested_01650640(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650640(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650640((undefined8 *)cursor, (long *)state);
+    nested_01650640((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650660(undefined8 *param_1,long *param_2)
+static void nested_01650660(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -4484,17 +4484,17 @@ static void nested_01650660(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650660(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650660((undefined8 *)cursor, (long *)state);
+    nested_01650660((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650690(undefined8 *param_1,long *param_2)
+static void nested_01650690(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -4503,30 +4503,30 @@ static void nested_01650690(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650690(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650690((undefined8 *)cursor, (long *)state);
+    nested_01650690((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016506c0(undefined8 *param_1,long *param_2)
+static void nested_016506c0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + 8 + lVar2 * 4) < *(long *)(lVar1 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + 8 + lVar2 * 4) < *(int64_t *)(lVar1 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_16506c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016506c0((undefined8 *)cursor, (long *)state);
+    nested_016506c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016506f0(undefined8 *param_1,long *param_2)
+static void nested_016506f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4534,17 +4534,17 @@ static void nested_016506f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16506f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016506f0((undefined8 *)cursor, (long *)state);
+    nested_016506f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650710(undefined8 *param_1,long *param_2)
+static void nested_01650710(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4552,17 +4552,17 @@ static void nested_01650710(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650710(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650710((undefined8 *)cursor, (long *)state);
+    nested_01650710((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650730(long *param_1,long *param_2)
+static void nested_01650730(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -4572,20 +4572,20 @@ static void nested_01650730(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650730(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650730((long *)cursor, (long *)state);
+    nested_01650730((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650750(undefined8 *param_1,long *param_2)
+static void nested_01650750(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4593,17 +4593,17 @@ static void nested_01650750(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650750(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650750((undefined8 *)cursor, (long *)state);
+    nested_01650750((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650770(undefined8 *param_1,long *param_2)
+static void nested_01650770(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4611,17 +4611,17 @@ static void nested_01650770(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650770(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650770((undefined8 *)cursor, (long *)state);
+    nested_01650770((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650790(undefined8 *param_1,long *param_2)
+static void nested_01650790(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4629,17 +4629,17 @@ static void nested_01650790(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650790(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650790((undefined8 *)cursor, (long *)state);
+    nested_01650790((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016507b0(long *param_1,long *param_2)
+static void nested_016507b0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -4648,32 +4648,32 @@ static void nested_016507b0(long *param_1,long *param_2)
   
   psVar2 = (short *)*param_1;
   sVar1 = *psVar2;
-  *param_1 = (uintptr_t)((long)(psVar2 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar2 + 1));
   uVar3 = *(undefined8 *)(psVar2 + 1);
-  *param_1 = (uintptr_t)((long)(psVar2 + 5));
-  *(undefined8 *)(*param_2 + (long)sVar1 * 4) = uVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar2 + 5));
+  *(undefined8 *)(*param_2 + (int64_t)sVar1 * 4) = uVar3;
   return;
 }
 
 static uintptr_t run_16507b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016507b0((long *)cursor, (long *)state);
+    nested_016507b0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016507e0(long *param_1,long *param_2)
+static void nested_016507e0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -4683,11 +4683,11 @@ static void nested_016507e0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_16507e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016507e0((long *)cursor, (long *)state);
+    nested_016507e0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650820(long *param_1,long *param_2)
+static void nested_01650820(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -4697,20 +4697,20 @@ static void nested_01650820(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650820(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650820((long *)cursor, (long *)state);
+    nested_01650820((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650840(undefined8 *param_1,long *param_2)
+static void nested_01650840(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4718,17 +4718,17 @@ static void nested_01650840(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650840(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650840((undefined8 *)cursor, (long *)state);
+    nested_01650840((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650860(undefined8 *param_1,long *param_2)
+static void nested_01650860(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4736,35 +4736,35 @@ static void nested_01650860(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650860(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650860((undefined8 *)cursor, (long *)state);
+    nested_01650860((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650880(undefined8 *param_1,long *param_2)
+static void nested_01650880(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
-  *plVar1 = *plVar1 - *(long *)(*param_2 + 8 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
+  *plVar1 = *plVar1 - *(int64_t *)(*param_2 + 8 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_1650880(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650880((undefined8 *)cursor, (long *)state);
+    nested_01650880((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016508a0(long *param_1,long *param_2)
+static void nested_016508a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -4774,20 +4774,20 @@ static void nested_016508a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16508a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016508a0((long *)cursor, (long *)state);
+    nested_016508a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016508c0(undefined8 *param_1,long *param_2)
+static void nested_016508c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4795,17 +4795,17 @@ static void nested_016508c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16508c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016508c0((undefined8 *)cursor, (long *)state);
+    nested_016508c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016508e0(undefined8 *param_1,long *param_2)
+static void nested_016508e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4813,23 +4813,23 @@ static void nested_016508e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16508e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016508e0((undefined8 *)cursor, (long *)state);
+    nested_016508e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650900(undefined8 *param_1,long *param_2)
+static void nested_01650900(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -4838,11 +4838,11 @@ static void nested_01650900(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650900(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650900((undefined8 *)cursor, (long *)state);
+    nested_01650900((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650930(long *param_1,long *param_2)
+static void nested_01650930(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -4851,19 +4851,19 @@ static void nested_01650930(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_1650930(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650930((long *)cursor, (long *)state);
+    nested_01650930((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650950(undefined8 *param_1,long *param_2)
+static void nested_01650950(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4871,17 +4871,17 @@ static void nested_01650950(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650950(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650950((undefined8 *)cursor, (long *)state);
+    nested_01650950((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650970(undefined8 *param_1,long *param_2)
+static void nested_01650970(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4889,17 +4889,17 @@ static void nested_01650970(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650970(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650970((undefined8 *)cursor, (long *)state);
+    nested_01650970((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650990(undefined8 *param_1,long *param_2)
+static void nested_01650990(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4907,17 +4907,17 @@ static void nested_01650990(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650990(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650990((undefined8 *)cursor, (long *)state);
+    nested_01650990((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016509b0(undefined8 *param_1,long *param_2)
+static void nested_016509b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4925,17 +4925,17 @@ static void nested_016509b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16509b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016509b0((undefined8 *)cursor, (long *)state);
+    nested_016509b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016509d0(undefined8 *param_1,long *param_2)
+static void nested_016509d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -4943,35 +4943,35 @@ static void nested_016509d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16509d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016509d0((undefined8 *)cursor, (long *)state);
+    nested_016509d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016509f0(undefined8 *param_1,long *param_2)
+static void nested_016509f0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
-  *(long *)(lVar1 + lVar2 * 4) = *(long *)(lVar1 + 8 + lVar2 * 4) * *(long *)(lVar1 + lVar2 * 4);
+  *(int64_t *)(lVar1 + lVar2 * 4) = *(int64_t *)(lVar1 + 8 + lVar2 * 4) * *(int64_t *)(lVar1 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_16509f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016509f0((undefined8 *)cursor, (long *)state);
+    nested_016509f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650a10(long *param_1,long *param_2)
+static void nested_01650a10(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -4981,26 +4981,26 @@ static void nested_01650a10(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650a10(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650a10((long *)cursor, (long *)state);
+    nested_01650a10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650a30(undefined8 *param_1,long *param_2)
+static void nested_01650a30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 & *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -5008,11 +5008,11 @@ static void nested_01650a30(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650a30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650a30((undefined8 *)cursor, (long *)state);
+    nested_01650a30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650a50(long *param_1,long *param_2)
+static void nested_01650a50(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -5021,26 +5021,26 @@ static void nested_01650a50(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1650a50(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650a50((long *)cursor, (long *)state);
+    nested_01650a50((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650a80(undefined8 *param_1,long *param_2)
+static void nested_01650a80(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 + *(int *)(*param_2 + 4 + lVar2 * 4);
@@ -5048,11 +5048,11 @@ static void nested_01650a80(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650a80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650a80((undefined8 *)cursor, (long *)state);
+    nested_01650a80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650aa0(undefined8 *param_1,long *param_2)
+static void nested_01650aa0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5060,24 +5060,24 @@ static void nested_01650aa0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650aa0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650aa0((undefined8 *)cursor, (long *)state);
+    nested_01650aa0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650ac0(undefined8 *param_1,long *param_2)
+static void nested_01650ac0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 4 + lVar3 * 4) & 0x1f;
@@ -5086,11 +5086,11 @@ static void nested_01650ac0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650ac0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650ac0((undefined8 *)cursor, (long *)state);
+    nested_01650ac0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650ae0(undefined8 *param_1,long *param_2)
+static void nested_01650ae0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5098,17 +5098,17 @@ static void nested_01650ae0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650ae0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650ae0((undefined8 *)cursor, (long *)state);
+    nested_01650ae0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650b00(undefined8 *param_1,long *param_2)
+static void nested_01650b00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5116,17 +5116,17 @@ static void nested_01650b00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650b00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650b00((undefined8 *)cursor, (long *)state);
+    nested_01650b00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650b20(undefined8 *param_1,long *param_2)
+static void nested_01650b20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5134,23 +5134,23 @@ static void nested_01650b20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650b20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650b20((undefined8 *)cursor, (long *)state);
+    nested_01650b20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650b40(undefined8 *param_1,long *param_2)
+static void nested_01650b40(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -5159,11 +5159,11 @@ static void nested_01650b40(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650b40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650b40((undefined8 *)cursor, (long *)state);
+    nested_01650b40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650b70(undefined8 *param_1,long *param_2)
+static void nested_01650b70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5171,17 +5171,17 @@ static void nested_01650b70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650b70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650b70((undefined8 *)cursor, (long *)state);
+    nested_01650b70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650b90(long *param_1,long *param_2)
+static void nested_01650b90(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -5190,20 +5190,20 @@ static void nested_01650b90(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(byte *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(byte *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1650b90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650b90((long *)cursor, (long *)state);
+    nested_01650b90((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650bc0(undefined8 *param_1,long *param_2)
+static void nested_01650bc0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5211,17 +5211,17 @@ static void nested_01650bc0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650bc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650bc0((undefined8 *)cursor, (long *)state);
+    nested_01650bc0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650be0(undefined8 *param_1,long *param_2)
+static void nested_01650be0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5229,17 +5229,17 @@ static void nested_01650be0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650be0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650be0((undefined8 *)cursor, (long *)state);
+    nested_01650be0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650c30(undefined8 *param_1,long *param_2)
+static void nested_01650c30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5247,23 +5247,23 @@ static void nested_01650c30(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650c30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650c30((undefined8 *)cursor, (long *)state);
+    nested_01650c30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650c50(undefined8 *param_1,long *param_2)
+static void nested_01650c50(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 | *(ulong *)(*param_2 + 8 + lVar2 * 4);
@@ -5271,11 +5271,11 @@ static void nested_01650c50(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650c50(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650c50((undefined8 *)cursor, (long *)state);
+    nested_01650c50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650c70(undefined8 *param_1,long *param_2)
+static void nested_01650c70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5283,23 +5283,23 @@ static void nested_01650c70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650c70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650c70((undefined8 *)cursor, (long *)state);
+    nested_01650c70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650c90(undefined8 *param_1,long *param_2)
+static void nested_01650c90(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(int *)(lVar1 + lVar2 * 4) = *(int *)(lVar1 + lVar2 * 4) / *(int *)(lVar1 + 4 + lVar2 * 4);
@@ -5307,11 +5307,11 @@ static void nested_01650c90(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650c90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650c90((undefined8 *)cursor, (long *)state);
+    nested_01650c90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650cb0(undefined8 *param_1,long *param_2)
+static void nested_01650cb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5319,50 +5319,50 @@ static void nested_01650cb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650cb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650cb0((undefined8 *)cursor, (long *)state);
+    nested_01650cb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650cd0(long *param_1,long *param_2)
+static void nested_01650cd0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar1 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar2 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_1650cd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650cd0((long *)cursor, (long *)state);
+    nested_01650cd0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650d10(undefined8 *param_1,long *param_2)
+static void nested_01650d10(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -5371,11 +5371,11 @@ static void nested_01650d10(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650d10(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650d10((undefined8 *)cursor, (long *)state);
+    nested_01650d10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650d40(long *param_1,long *param_2)
+static void nested_01650d40(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5385,20 +5385,20 @@ static void nested_01650d40(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650d40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650d40((long *)cursor, (long *)state);
+    nested_01650d40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650d60(undefined8 *param_1,long *param_2)
+static void nested_01650d60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5406,17 +5406,17 @@ static void nested_01650d60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650d60(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650d60((undefined8 *)cursor, (long *)state);
+    nested_01650d60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650d80(undefined8 *param_1,long *param_2)
+static void nested_01650d80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5424,17 +5424,17 @@ static void nested_01650d80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650d80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650d80((undefined8 *)cursor, (long *)state);
+    nested_01650d80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650da0(undefined8 *param_1,long *param_2)
+static void nested_01650da0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5442,23 +5442,23 @@ static void nested_01650da0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650da0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650da0((undefined8 *)cursor, (long *)state);
+    nested_01650da0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650dc0(undefined8 *param_1,long *param_2)
+static void nested_01650dc0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 | *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -5466,11 +5466,11 @@ static void nested_01650dc0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650dc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650dc0((undefined8 *)cursor, (long *)state);
+    nested_01650dc0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650de0(undefined8 *param_1,long *param_2)
+static void nested_01650de0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5478,44 +5478,44 @@ static void nested_01650de0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650de0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650de0((undefined8 *)cursor, (long *)state);
+    nested_01650de0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650e00(long *param_1,long *param_2)
+static void nested_01650e00(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar2 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar1 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_1650e00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650e00((long *)cursor, (long *)state);
+    nested_01650e00((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650e40(undefined8 *param_1,long *param_2)
+static void nested_01650e40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5523,17 +5523,17 @@ static void nested_01650e40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650e40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650e40((undefined8 *)cursor, (long *)state);
+    nested_01650e40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650e60(long *param_1,long *param_2)
+static void nested_01650e60(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -5542,20 +5542,20 @@ static void nested_01650e60(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(int *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(int *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1650e60(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650e60((long *)cursor, (long *)state);
+    nested_01650e60((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650e90(long *param_1,long *param_2)
+static void nested_01650e90(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5565,20 +5565,20 @@ static void nested_01650e90(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650e90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650e90((long *)cursor, (long *)state);
+    nested_01650e90((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650ed0(undefined8 *param_1,long *param_2)
+static void nested_01650ed0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5586,25 +5586,25 @@ static void nested_01650ed0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650ed0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650ed0((undefined8 *)cursor, (long *)state);
+    nested_01650ed0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650ef0(undefined8 *param_1,long *param_2)
+static void nested_01650ef0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -5618,18 +5618,18 @@ static void nested_01650ef0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650ef0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650ef0((undefined8 *)cursor, (long *)state);
+    nested_01650ef0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650f30(undefined8 *param_1,long *param_2)
+static void nested_01650f30(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 8 + lVar3 * 4) & 0x3f;
@@ -5638,11 +5638,11 @@ static void nested_01650f30(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1650f30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650f30((undefined8 *)cursor, (long *)state);
+    nested_01650f30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650f50(undefined8 *param_1,long *param_2)
+static void nested_01650f50(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5650,17 +5650,17 @@ static void nested_01650f50(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1650f50(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650f50((undefined8 *)cursor, (long *)state);
+    nested_01650f50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650f90(undefined8 *param_1,long *param_2)
+static void nested_01650f90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5668,17 +5668,17 @@ static void nested_01650f90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1650f90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650f90((undefined8 *)cursor, (long *)state);
+    nested_01650f90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650fb0(undefined8 *param_1,long *param_2)
+static void nested_01650fb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5686,17 +5686,17 @@ static void nested_01650fb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650fb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650fb0((undefined8 *)cursor, (long *)state);
+    nested_01650fb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650fd0(undefined8 *param_1,long *param_2)
+static void nested_01650fd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5704,17 +5704,17 @@ static void nested_01650fd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1650fd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650fd0((undefined8 *)cursor, (long *)state);
+    nested_01650fd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01650ff0(long *param_1,long *param_2)
+static void nested_01650ff0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5724,20 +5724,20 @@ static void nested_01650ff0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1650ff0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01650ff0((long *)cursor, (long *)state);
+    nested_01650ff0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651070(undefined8 *param_1,long *param_2)
+static void nested_01651070(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5745,42 +5745,42 @@ static void nested_01651070(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651070(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651070((undefined8 *)cursor, (long *)state);
+    nested_01651070((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651090(undefined8 *param_1,long *param_2)
+static void nested_01651090(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) <= *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) <= *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_1651090(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651090((undefined8 *)cursor, (long *)state);
+    nested_01651090((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016510c0(undefined8 *param_1,long *param_2)
+static void nested_016510c0(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 & *(ulong *)(*param_2 + 8 + lVar2 * 4);
@@ -5788,11 +5788,11 @@ static void nested_016510c0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16510c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016510c0((undefined8 *)cursor, (long *)state);
+    nested_016510c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016510e0(undefined8 *param_1,long *param_2)
+static void nested_016510e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5800,30 +5800,30 @@ static void nested_016510e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16510e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016510e0((undefined8 *)cursor, (long *)state);
+    nested_016510e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651100(long *param_1,long *param_2)
+static void nested_01651100(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -5832,11 +5832,11 @@ static void nested_01651100(long *param_1,long *param_2)
 }
 
 static uintptr_t run_1651100(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651100((long *)cursor, (long *)state);
+    nested_01651100((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651140(long *param_1,long *param_2)
+static void nested_01651140(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -5845,20 +5845,20 @@ static void nested_01651140(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined1 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined1 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1651140(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651140((long *)cursor, (long *)state);
+    nested_01651140((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651170(long *param_1,long *param_2)
+static void nested_01651170(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5868,20 +5868,20 @@ static void nested_01651170(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651170(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651170((long *)cursor, (long *)state);
+    nested_01651170((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651190(undefined8 *param_1,long *param_2)
+static void nested_01651190(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5889,17 +5889,17 @@ static void nested_01651190(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651190(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651190((undefined8 *)cursor, (long *)state);
+    nested_01651190((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016511b0(long *param_1,long *param_2)
+static void nested_016511b0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5909,27 +5909,27 @@ static void nested_016511b0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16511b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016511b0((long *)cursor, (long *)state);
+    nested_016511b0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016511d0(undefined8 *param_1,long *param_2)
+static void nested_016511d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 4 + lVar3 * 4) & 0x1f;
@@ -5938,11 +5938,11 @@ static void nested_016511d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16511d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016511d0((undefined8 *)cursor, (long *)state);
+    nested_016511d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016511f0(long *param_1,long *param_2)
+static void nested_016511f0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5952,20 +5952,20 @@ static void nested_016511f0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16511f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016511f0((long *)cursor, (long *)state);
+    nested_016511f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651210(undefined8 *param_1,long *param_2)
+static void nested_01651210(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -5973,17 +5973,17 @@ static void nested_01651210(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651210(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651210((undefined8 *)cursor, (long *)state);
+    nested_01651210((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651230(long *param_1,long *param_2)
+static void nested_01651230(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -5993,26 +5993,26 @@ static void nested_01651230(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651230(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651230((long *)cursor, (long *)state);
+    nested_01651230((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651250(undefined8 *param_1,long *param_2)
+static void nested_01651250(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(undefined4 *)(lVar1 + lVar2 * 4) =
@@ -6021,11 +6021,11 @@ static void nested_01651250(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1651250(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651250((undefined8 *)cursor, (long *)state);
+    nested_01651250((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651280(long *param_1,long *param_2)
+static void nested_01651280(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6035,20 +6035,20 @@ static void nested_01651280(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651280(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651280((long *)cursor, (long *)state);
+    nested_01651280((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016512a0(undefined8 *param_1,long *param_2)
+static void nested_016512a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6056,17 +6056,17 @@ static void nested_016512a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16512a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016512a0((undefined8 *)cursor, (long *)state);
+    nested_016512a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016512c0(long *param_1,long *param_2)
+static void nested_016512c0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -6077,23 +6077,23 @@ static void nested_016512c0(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar2 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar2 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_16512c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016512c0((long *)cursor, (long *)state);
+    nested_016512c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651300(undefined8 *param_1,long *param_2)
+static void nested_01651300(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6101,17 +6101,17 @@ static void nested_01651300(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651300(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651300((undefined8 *)cursor, (long *)state);
+    nested_01651300((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651320(undefined8 *param_1,long *param_2)
+static void nested_01651320(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6119,33 +6119,33 @@ static void nested_01651320(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651320(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651320((undefined8 *)cursor, (long *)state);
+    nested_01651320((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651340(undefined8 *param_1,long *param_2)
+static void nested_01651340(undefined8 *param_1,int64_t *param_2)
 
 {
   short sVar1;
   
   sVar1 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = *(undefined4 *)param_2[3];
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = *(undefined4 *)param_2[3];
   return;
 }
 
 static uintptr_t run_1651340(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651340((undefined8 *)cursor, (long *)state);
+    nested_01651340((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651380(undefined8 *param_1,long *param_2)
+static void nested_01651380(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6153,17 +6153,17 @@ static void nested_01651380(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651380(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651380((undefined8 *)cursor, (long *)state);
+    nested_01651380((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016513a0(long *param_1,long *param_2)
+static void nested_016513a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6173,20 +6173,20 @@ static void nested_016513a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16513a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016513a0((long *)cursor, (long *)state);
+    nested_016513a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016513c0(undefined8 *param_1,long *param_2)
+static void nested_016513c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6194,41 +6194,41 @@ static void nested_016513c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16513c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016513c0((undefined8 *)cursor, (long *)state);
+    nested_016513c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016513e0(long *param_1,long *param_2)
+static void nested_016513e0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
+  int64_t lVar4;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  lVar4 = *(long *)(psVar3 + 3);
-  *param_1 = (uintptr_t)((long)(psVar3 + 7));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) = (ulong)*(uint *)(param_2 + 2) * (ulong)uVar2 + lVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  lVar4 = *(int64_t *)(psVar3 + 3);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 7));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) = (ulong)*(uint *)(param_2 + 2) * (ulong)uVar2 + lVar4;
   return;
 }
 
 static uintptr_t run_16513e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016513e0((long *)cursor, (long *)state);
+    nested_016513e0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651420(undefined8 *param_1,long *param_2)
+static void nested_01651420(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6236,17 +6236,17 @@ static void nested_01651420(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651420(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651420((undefined8 *)cursor, (long *)state);
+    nested_01651420((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651440(long *param_1,long *param_2)
+static void nested_01651440(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6256,20 +6256,20 @@ static void nested_01651440(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651440(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651440((long *)cursor, (long *)state);
+    nested_01651440((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651460(long *param_1,long *param_2)
+static void nested_01651460(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6279,20 +6279,20 @@ static void nested_01651460(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651460(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651460((long *)cursor, (long *)state);
+    nested_01651460((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651480(undefined8 *param_1,long *param_2)
+static void nested_01651480(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6300,17 +6300,17 @@ static void nested_01651480(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651480(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651480((undefined8 *)cursor, (long *)state);
+    nested_01651480((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016514a0(long *param_1,long *param_2)
+static void nested_016514a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6320,20 +6320,20 @@ static void nested_016514a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16514a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016514a0((long *)cursor, (long *)state);
+    nested_016514a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016514c0(long *param_1,long *param_2)
+static void nested_016514c0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6343,20 +6343,20 @@ static void nested_016514c0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16514c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016514c0((long *)cursor, (long *)state);
+    nested_016514c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016514e0(undefined8 *param_1,long *param_2)
+static void nested_016514e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6364,17 +6364,17 @@ static void nested_016514e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16514e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016514e0((undefined8 *)cursor, (long *)state);
+    nested_016514e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651500(long *param_1,long *param_2)
+static void nested_01651500(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6384,20 +6384,20 @@ static void nested_01651500(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651500(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651500((long *)cursor, (long *)state);
+    nested_01651500((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651520(undefined8 *param_1,long *param_2)
+static void nested_01651520(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6405,17 +6405,17 @@ static void nested_01651520(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651520(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651520((undefined8 *)cursor, (long *)state);
+    nested_01651520((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651540(long *param_1,long *param_2)
+static void nested_01651540(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -6424,20 +6424,20 @@ static void nested_01651540(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined4 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined4 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1651540(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651540((long *)cursor, (long *)state);
+    nested_01651540((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651570(undefined8 *param_1,long *param_2)
+static void nested_01651570(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6445,25 +6445,25 @@ static void nested_01651570(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651570(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651570((undefined8 *)cursor, (long *)state);
+    nested_01651570((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_01651590(undefined8 *param_1,long *param_2)
+static ulong nested_01651590(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -6477,26 +6477,26 @@ static ulong nested_01651590(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1651590(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_01651590((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_01651590((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_016515d0(undefined8 *param_1,long *param_2)
+static void nested_016515d0(undefined8 *param_1,int64_t *param_2)
 
 {
   short sVar1;
   
   sVar1 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(undefined4 *)param_2[3] = *(undefined4 *)(*param_2 + (long)sVar1 * 4);
+  *(undefined4 *)param_2[3] = *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_16515d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016515d0((undefined8 *)cursor, (long *)state);
+    nested_016515d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016515f0(undefined8 *param_1,long *param_2)
+static void nested_016515f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6504,17 +6504,17 @@ static void nested_016515f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16515f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016515f0((undefined8 *)cursor, (long *)state);
+    nested_016515f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651610(undefined8 *param_1,long *param_2)
+static void nested_01651610(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6522,54 +6522,54 @@ static void nested_01651610(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651610(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651610((undefined8 *)cursor, (long *)state);
+    nested_01651610((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651630(undefined8 *param_1,long *param_2)
+static void nested_01651630(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) < *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) < *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_1651630(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651630((undefined8 *)cursor, (long *)state);
+    nested_01651630((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651660(undefined8 *param_1,long *param_2)
+static void nested_01651660(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
-  *plVar1 = *plVar1 + *(long *)(*param_2 + 8 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
+  *plVar1 = *plVar1 + *(int64_t *)(*param_2 + 8 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_1651660(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651660((undefined8 *)cursor, (long *)state);
+    nested_01651660((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651680(undefined8 *param_1,long *param_2)
+static void nested_01651680(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6577,17 +6577,17 @@ static void nested_01651680(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651680(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651680((undefined8 *)cursor, (long *)state);
+    nested_01651680((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016516a0(long *param_1,long *param_2)
+static void nested_016516a0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -6596,20 +6596,20 @@ static void nested_016516a0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined8 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined8 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_16516a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016516a0((long *)cursor, (long *)state);
+    nested_016516a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016516d0(undefined8 *param_1,long *param_2)
+static void nested_016516d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6617,17 +6617,17 @@ static void nested_016516d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16516d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016516d0((undefined8 *)cursor, (long *)state);
+    nested_016516d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016516f0(undefined8 *param_1,long *param_2)
+static void nested_016516f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6635,17 +6635,17 @@ static void nested_016516f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16516f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016516f0((undefined8 *)cursor, (long *)state);
+    nested_016516f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651730(undefined8 *param_1,long *param_2)
+static void nested_01651730(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6653,17 +6653,17 @@ static void nested_01651730(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651730(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651730((undefined8 *)cursor, (long *)state);
+    nested_01651730((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651750(undefined8 *param_1,long *param_2)
+static void nested_01651750(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6671,17 +6671,17 @@ static void nested_01651750(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651750(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651750((undefined8 *)cursor, (long *)state);
+    nested_01651750((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651770(undefined8 *param_1,long *param_2)
+static void nested_01651770(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6689,17 +6689,17 @@ static void nested_01651770(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651770(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651770((undefined8 *)cursor, (long *)state);
+    nested_01651770((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651790(undefined8 *param_1,long *param_2)
+static void nested_01651790(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6707,44 +6707,44 @@ static void nested_01651790(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651790(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651790((undefined8 *)cursor, (long *)state);
+    nested_01651790((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016517b0(long *param_1,long *param_2)
+static void nested_016517b0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
   short sVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   sVar2 = psVar3[1];
-  *param_1 = (uintptr_t)((long)(psVar3 + 2));
-  lVar4 = *(long *)(psVar3 + 2);
-  *param_1 = (uintptr_t)((long)(psVar3 + 6));
-  lVar5 = *(long *)(psVar3 + 6);
-  *param_1 = (uintptr_t)((long)(psVar3 + 10));
-  *(long *)(*param_2 + (long)sVar2 * 4) = lVar4 * *(long *)(*param_2 + (long)sVar1 * 4) + lVar5;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 2));
+  lVar4 = *(int64_t *)(psVar3 + 2);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 6));
+  lVar5 = *(int64_t *)(psVar3 + 6);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 10));
+  *(int64_t *)(*param_2 + (int64_t)sVar2 * 4) = lVar4 * *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) + lVar5;
   return;
 }
 
 static uintptr_t run_16517b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016517b0((long *)cursor, (long *)state);
+    nested_016517b0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016517f0(long *param_1,long *param_2)
+static void nested_016517f0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6754,20 +6754,20 @@ static void nested_016517f0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16517f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016517f0((long *)cursor, (long *)state);
+    nested_016517f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651810(long *param_1,long *param_2)
+static void nested_01651810(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6777,20 +6777,20 @@ static void nested_01651810(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651810(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651810((long *)cursor, (long *)state);
+    nested_01651810((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651830(long *param_1,long *param_2)
+static void nested_01651830(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6800,20 +6800,20 @@ static void nested_01651830(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651830(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651830((long *)cursor, (long *)state);
+    nested_01651830((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651850(long *param_1,long *param_2)
+static void nested_01651850(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -6824,23 +6824,23 @@ static void nested_01651850(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_1651850(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651850((long *)cursor, (long *)state);
+    nested_01651850((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651890(undefined8 *param_1,long *param_2)
+static void nested_01651890(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6848,17 +6848,17 @@ static void nested_01651890(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651890(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651890((undefined8 *)cursor, (long *)state);
+    nested_01651890((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016518b0(undefined8 *param_1,long *param_2)
+static void nested_016518b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6866,23 +6866,23 @@ static void nested_016518b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16518b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016518b0((undefined8 *)cursor, (long *)state);
+    nested_016518b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016518d0(undefined8 *param_1,long *param_2)
+static void nested_016518d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -6891,11 +6891,11 @@ static void nested_016518d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16518d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016518d0((undefined8 *)cursor, (long *)state);
+    nested_016518d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651920(undefined8 *param_1,long *param_2)
+static void nested_01651920(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6903,17 +6903,17 @@ static void nested_01651920(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651920(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651920((undefined8 *)cursor, (long *)state);
+    nested_01651920((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651940(long *param_1,long *param_2)
+static void nested_01651940(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -6922,20 +6922,20 @@ static void nested_01651940(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(uint *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(uint *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1651940(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651940((long *)cursor, (long *)state);
+    nested_01651940((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651970(long *param_1,long *param_2)
+static void nested_01651970(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -6945,26 +6945,26 @@ static void nested_01651970(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651970(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651970((long *)cursor, (long *)state);
+    nested_01651970((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016519d0(undefined8 *param_1,long *param_2)
+static void nested_016519d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -6973,11 +6973,11 @@ static void nested_016519d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16519d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016519d0((undefined8 *)cursor, (long *)state);
+    nested_016519d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651a00(undefined8 *param_1,long *param_2)
+static void nested_01651a00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -6985,17 +6985,17 @@ static void nested_01651a00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651a00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651a00((undefined8 *)cursor, (long *)state);
+    nested_01651a00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651a20(undefined8 *param_1,long *param_2)
+static void nested_01651a20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7003,30 +7003,30 @@ static void nested_01651a20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651a20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651a20((undefined8 *)cursor, (long *)state);
+    nested_01651a20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651a40(long *param_1,long *param_2)
+static void nested_01651a40(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -7035,11 +7035,11 @@ static void nested_01651a40(long *param_1,long *param_2)
 }
 
 static uintptr_t run_1651a40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651a40((long *)cursor, (long *)state);
+    nested_01651a40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651a80(undefined8 *param_1,long *param_2)
+static void nested_01651a80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7047,17 +7047,17 @@ static void nested_01651a80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651a80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651a80((undefined8 *)cursor, (long *)state);
+    nested_01651a80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651ac0(long *param_1,long *param_2)
+static void nested_01651ac0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7067,41 +7067,41 @@ static void nested_01651ac0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651ac0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651ac0((long *)cursor, (long *)state);
+    nested_01651ac0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_01651ae0(undefined8 *param_1,long *param_2)
+static ulong nested_01651ae0(undefined8 *param_1,int64_t *param_2)
 
 {
   int iVar1;
   int iVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   iVar1 = *(int *)(lVar3 + lVar4 * 4);
   iVar2 = *(int *)(lVar3 + 4 + lVar4 * 4);
   *(int *)(lVar3 + lVar4 * 4) = iVar1 % iVar2;
-  return (long)iVar1 / (long)iVar2 & 0xffffffff;
+  return (int64_t)iVar1 / (int64_t)iVar2 & 0xffffffff;
 }
 
 static uintptr_t run_1651ae0(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_01651ae0((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_01651ae0((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_01651b00(undefined8 *param_1,long *param_2)
+static void nested_01651b00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7109,17 +7109,17 @@ static void nested_01651b00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651b00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651b00((undefined8 *)cursor, (long *)state);
+    nested_01651b00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651b20(undefined8 *param_1,long *param_2)
+static void nested_01651b20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7127,17 +7127,17 @@ static void nested_01651b20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651b20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651b20((undefined8 *)cursor, (long *)state);
+    nested_01651b20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651b40(long *param_1,long *param_2)
+static void nested_01651b40(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7147,20 +7147,20 @@ static void nested_01651b40(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651b40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651b40((long *)cursor, (long *)state);
+    nested_01651b40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651b60(undefined8 *param_1,long *param_2)
+static void nested_01651b60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7168,17 +7168,17 @@ static void nested_01651b60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651b60(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651b60((undefined8 *)cursor, (long *)state);
+    nested_01651b60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651b80(undefined8 *param_1,long *param_2)
+static void nested_01651b80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7186,17 +7186,17 @@ static void nested_01651b80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651b80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651b80((undefined8 *)cursor, (long *)state);
+    nested_01651b80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651ba0(long *param_1,long *param_2)
+static void nested_01651ba0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7206,39 +7206,39 @@ static void nested_01651ba0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651ba0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651ba0((long *)cursor, (long *)state);
+    nested_01651ba0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651bc0(undefined8 *param_1,long *param_2)
+static void nested_01651bc0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) == *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) == *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_1651bc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651bc0((undefined8 *)cursor, (long *)state);
+    nested_01651bc0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651bf0(long *param_1,long *param_2)
+static void nested_01651bf0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7248,21 +7248,21 @@ static void nested_01651bf0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar1 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   uVar2 = psVar4[1];
-  *param_1 = (uintptr_t)((long)(psVar4 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 2));
   iVar3 = *(int *)(psVar4 + 2);
-  *param_1 = (uintptr_t)((long)(psVar4 + 4));
-  *(uint *)(*param_2 + (long)sVar1 * 4) = (uint)uVar2 * (int)param_2[2] + iVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 4));
+  *(uint *)(*param_2 + (int64_t)sVar1 * 4) = (uint)uVar2 * (int)param_2[2] + iVar3;
   return;
 }
 
 static uintptr_t run_1651bf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651bf0((long *)cursor, (long *)state);
+    nested_01651bf0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651c30(long *param_1,long *param_2)
+static void nested_01651c30(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7272,20 +7272,20 @@ static void nested_01651c30(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651c30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651c30((long *)cursor, (long *)state);
+    nested_01651c30((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651c70(undefined8 *param_1,long *param_2)
+static void nested_01651c70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7293,17 +7293,17 @@ static void nested_01651c70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651c70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651c70((undefined8 *)cursor, (long *)state);
+    nested_01651c70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651cb0(long *param_1,long *param_2)
+static void nested_01651cb0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7313,28 +7313,28 @@ static void nested_01651cb0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651cb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651cb0((long *)cursor, (long *)state);
+    nested_01651cb0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_01651cd0(undefined8 *param_1,long *param_2)
+static ulong nested_01651cd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   uVar1 = *(uint *)(lVar3 + lVar4 * 4);
@@ -7344,10 +7344,10 @@ static ulong nested_01651cd0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1651cd0(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_01651cd0((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_01651cd0((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_01651cf0(undefined8 *param_1,long *param_2)
+static void nested_01651cf0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7355,17 +7355,17 @@ static void nested_01651cf0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651cf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651cf0((undefined8 *)cursor, (long *)state);
+    nested_01651cf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651d10(undefined8 *param_1,long *param_2)
+static void nested_01651d10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7373,17 +7373,17 @@ static void nested_01651d10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651d10(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651d10((undefined8 *)cursor, (long *)state);
+    nested_01651d10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651d30(long *param_1,long *param_2)
+static void nested_01651d30(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7392,20 +7392,20 @@ static void nested_01651d30(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1651d30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651d30((long *)cursor, (long *)state);
+    nested_01651d30((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651d60(long *param_1)
+static void nested_01651d60(int64_t *param_1)
 
 {
   *param_1 = (uintptr_t)(*param_1 + 2);
@@ -7414,11 +7414,11 @@ static void nested_01651d60(long *param_1)
 
 static uintptr_t run_1651d60(uintptr_t *cursor, uintptr_t *state) {
     (void)state;
-    nested_01651d60((long *)cursor);
+    nested_01651d60((int64_t *)cursor);
     return 0;
 }
 
-static void nested_01651d70(undefined8 *param_1,long *param_2)
+static void nested_01651d70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7426,17 +7426,17 @@ static void nested_01651d70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651d70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651d70((undefined8 *)cursor, (long *)state);
+    nested_01651d70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651d90(long *param_1,long *param_2)
+static void nested_01651d90(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7446,20 +7446,20 @@ static void nested_01651d90(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1651d90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651d90((long *)cursor, (long *)state);
+    nested_01651d90((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651db0(undefined8 *param_1,long *param_2)
+static void nested_01651db0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7467,17 +7467,17 @@ static void nested_01651db0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651db0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651db0((undefined8 *)cursor, (long *)state);
+    nested_01651db0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651df0(undefined8 *param_1,long *param_2)
+static void nested_01651df0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7485,23 +7485,23 @@ static void nested_01651df0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651df0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651df0((undefined8 *)cursor, (long *)state);
+    nested_01651df0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651e10(undefined8 *param_1,long *param_2)
+static void nested_01651e10(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 - *(int *)(*param_2 + 4 + lVar2 * 4);
@@ -7509,11 +7509,11 @@ static void nested_01651e10(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1651e10(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651e10((undefined8 *)cursor, (long *)state);
+    nested_01651e10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651e30(undefined8 *param_1,long *param_2)
+static void nested_01651e30(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7521,17 +7521,17 @@ static void nested_01651e30(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1651e30(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651e30((undefined8 *)cursor, (long *)state);
+    nested_01651e30((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651e70(long *param_1,long *param_2)
+static void nested_01651e70(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7540,20 +7540,20 @@ static void nested_01651e70(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1651e70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651e70((long *)cursor, (long *)state);
+    nested_01651e70((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651ea0(long *param_1,long *param_2)
+static void nested_01651ea0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7562,28 +7562,28 @@ static void nested_01651ea0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined1 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined1 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined1 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1651ea0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651ea0((long *)cursor, (long *)state);
+    nested_01651ea0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651ed0(undefined8 *param_1,long *param_2)
+static void nested_01651ed0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
-  long lVar3;
-  long lVar4;
+  int64_t lVar3;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar3 = *param_2;
   uVar1 = *(uint *)(lVar3 + lVar4 * 4);
@@ -7593,11 +7593,11 @@ static void nested_01651ed0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1651ed0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651ed0((undefined8 *)cursor, (long *)state);
+    nested_01651ed0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651f20(undefined8 *param_1,long *param_2)
+static void nested_01651f20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7605,17 +7605,17 @@ static void nested_01651f20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651f20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651f20((undefined8 *)cursor, (long *)state);
+    nested_01651f20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651f40(long *param_1,long *param_2)
+static void nested_01651f40(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7626,23 +7626,23 @@ static void nested_01651f40(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_1651f40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651f40((long *)cursor, (long *)state);
+    nested_01651f40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651f80(undefined8 *param_1,long *param_2)
+static void nested_01651f80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7650,33 +7650,33 @@ static void nested_01651f80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1651f80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651f80((undefined8 *)cursor, (long *)state);
+    nested_01651f80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651fa0(undefined8 *param_1,long *param_2)
+static void nested_01651fa0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(ulong *)(*param_2 + lVar1 * 4) = (ulong)*(uint *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_1651fa0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651fa0((undefined8 *)cursor, (long *)state);
+    nested_01651fa0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651fc0(long *param_1,long *param_2)
+static void nested_01651fc0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7685,20 +7685,20 @@ static void nested_01651fc0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1651fc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651fc0((long *)cursor, (long *)state);
+    nested_01651fc0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01651ff0(undefined8 *param_1,long *param_2)
+static void nested_01651ff0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7706,35 +7706,35 @@ static void nested_01651ff0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1651ff0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01651ff0((undefined8 *)cursor, (long *)state);
+    nested_01651ff0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652030(undefined8 *param_1,long *param_2)
+static void nested_01652030(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
   *plVar1 = *plVar1 << (*(byte *)(*param_2 + 8 + lVar2 * 4) & 0x3f);
   return;
 }
 
 static uintptr_t run_1652030(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652030((undefined8 *)cursor, (long *)state);
+    nested_01652030((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652050(undefined8 *param_1,long *param_2)
+static void nested_01652050(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7742,23 +7742,23 @@ static void nested_01652050(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652050(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652050((undefined8 *)cursor, (long *)state);
+    nested_01652050((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016520b0(undefined8 *param_1,long *param_2)
+static void nested_016520b0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) = *(uint *)(lVar1 + lVar2 * 4) / *(uint *)(lVar1 + 4 + lVar2 * 4);
@@ -7766,17 +7766,17 @@ static void nested_016520b0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16520b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016520b0((undefined8 *)cursor, (long *)state);
+    nested_016520b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016520d0(undefined8 *param_1,long *param_2)
+static void nested_016520d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -7785,11 +7785,11 @@ static void nested_016520d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16520d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016520d0((undefined8 *)cursor, (long *)state);
+    nested_016520d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652100(long *param_1,long *param_2)
+static void nested_01652100(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -7798,20 +7798,20 @@ static void nested_01652100(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined4 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined4 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_1652100(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652100((long *)cursor, (long *)state);
+    nested_01652100((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652130(long *param_1,long *param_2)
+static void nested_01652130(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7821,20 +7821,20 @@ static void nested_01652130(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652130(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652130((long *)cursor, (long *)state);
+    nested_01652130((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652150(undefined8 *param_1,long *param_2)
+static void nested_01652150(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7842,36 +7842,36 @@ static void nested_01652150(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652150(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652150((undefined8 *)cursor, (long *)state);
+    nested_01652150((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652170(undefined8 *param_1,long *param_2)
+static void nested_01652170(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + lVar2 * 4) != *(long *)(lVar1 + 8 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + lVar2 * 4) != *(int64_t *)(lVar1 + 8 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_1652170(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652170((undefined8 *)cursor, (long *)state);
+    nested_01652170((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016521c0(long *param_1,long *param_2)
+static void nested_016521c0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -7881,26 +7881,26 @@ static void nested_016521c0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16521c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016521c0((long *)cursor, (long *)state);
+    nested_016521c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016521e0(undefined8 *param_1,long *param_2)
+static void nested_016521e0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -7909,11 +7909,11 @@ static void nested_016521e0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16521e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016521e0((undefined8 *)cursor, (long *)state);
+    nested_016521e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652210(undefined8 *param_1,long *param_2)
+static void nested_01652210(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7921,17 +7921,17 @@ static void nested_01652210(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652210(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652210((undefined8 *)cursor, (long *)state);
+    nested_01652210((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652230(undefined8 *param_1,long *param_2)
+static void nested_01652230(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7939,33 +7939,33 @@ static void nested_01652230(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652230(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652230((undefined8 *)cursor, (long *)state);
+    nested_01652230((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652250(undefined8 *param_1,long *param_2)
+static void nested_01652250(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(long *)(*param_2 + lVar1 * 4) == 0);
+  *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(int64_t *)(*param_2 + lVar1 * 4) == 0);
   return;
 }
 
 static uintptr_t run_1652250(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652250((undefined8 *)cursor, (long *)state);
+    nested_01652250((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652290(undefined8 *param_1,long *param_2)
+static void nested_01652290(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7973,17 +7973,17 @@ static void nested_01652290(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652290(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652290((undefined8 *)cursor, (long *)state);
+    nested_01652290((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016522b0(undefined8 *param_1,long *param_2)
+static void nested_016522b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -7991,17 +7991,17 @@ static void nested_016522b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16522b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016522b0((undefined8 *)cursor, (long *)state);
+    nested_016522b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016522d0(undefined8 *param_1,long *param_2)
+static void nested_016522d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8009,30 +8009,30 @@ static void nested_016522d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16522d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016522d0((undefined8 *)cursor, (long *)state);
+    nested_016522d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652310(long *param_1,long *param_2)
+static void nested_01652310(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -8042,11 +8042,11 @@ static void nested_01652310(long *param_1,long *param_2)
 }
 
 static uintptr_t run_1652310(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652310((long *)cursor, (long *)state);
+    nested_01652310((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652350(long *param_1,long *param_2)
+static void nested_01652350(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8056,28 +8056,28 @@ static void nested_01652350(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652350(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652350((long *)cursor, (long *)state);
+    nested_01652350((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652370(undefined8 *param_1,long *param_2)
+static void nested_01652370(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -8086,22 +8086,22 @@ static void nested_01652370(undefined8 *param_1,long *param_2)
     *(ulong *)(lVar1 + lVar4 * 4) = (uVar2 & 0xffffffff) / (uVar3 & 0xffffffff);
     return;
   }
-  *(long *)(lVar1 + lVar4 * 4) = (long)uVar2 / (long)uVar3;
+  *(int64_t *)(lVar1 + lVar4 * 4) = (int64_t)uVar2 / (int64_t)uVar3;
   return;
 }
 
 static uintptr_t run_1652370(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652370((undefined8 *)cursor, (long *)state);
+    nested_01652370((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016523b0(undefined8 *param_1,long *param_2)
+static void nested_016523b0(undefined8 *param_1,int64_t *param_2)
 
 {
   int *piVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   piVar1 = (int *)(*param_2 + lVar2 * 4);
   *piVar1 = *piVar1 << (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -8109,11 +8109,11 @@ static void nested_016523b0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16523b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016523b0((undefined8 *)cursor, (long *)state);
+    nested_016523b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016523d0(long *param_1,long *param_2)
+static void nested_016523d0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8123,36 +8123,36 @@ static void nested_016523d0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16523d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016523d0((long *)cursor, (long *)state);
+    nested_016523d0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652410(undefined8 *param_1,long *param_2)
+static void nested_01652410(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(uint *)(*param_2 + lVar1 * 4) = (uint)(*(int *)(*param_2 + lVar1 * 4) == 0);
   return;
 }
 
 static uintptr_t run_1652410(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652410((undefined8 *)cursor, (long *)state);
+    nested_01652410((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652430(undefined8 *param_1,long *param_2)
+static void nested_01652430(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8160,17 +8160,17 @@ static void nested_01652430(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652430(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652430((undefined8 *)cursor, (long *)state);
+    nested_01652430((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652450(long *param_1,long *param_2)
+static void nested_01652450(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8180,20 +8180,20 @@ static void nested_01652450(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652450(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652450((long *)cursor, (long *)state);
+    nested_01652450((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652470(undefined8 *param_1,long *param_2)
+static void nested_01652470(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8201,17 +8201,17 @@ static void nested_01652470(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652470(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652470((undefined8 *)cursor, (long *)state);
+    nested_01652470((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652490(long *param_1,long *param_2)
+static void nested_01652490(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -8220,19 +8220,19 @@ static void nested_01652490(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_1652490(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652490((long *)cursor, (long *)state);
+    nested_01652490((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016524b0(undefined8 *param_1,long *param_2)
+static void nested_016524b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8240,23 +8240,23 @@ static void nested_016524b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16524b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016524b0((undefined8 *)cursor, (long *)state);
+    nested_016524b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016524d0(undefined8 *param_1,long *param_2)
+static void nested_016524d0(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 >> (*(byte *)(*param_2 + 8 + lVar2 * 4) & 0x3f);
@@ -8264,11 +8264,11 @@ static void nested_016524d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16524d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016524d0((undefined8 *)cursor, (long *)state);
+    nested_016524d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016524f0(undefined8 *param_1,long *param_2)
+static void nested_016524f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8276,39 +8276,39 @@ static void nested_016524f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16524f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016524f0((undefined8 *)cursor, (long *)state);
+    nested_016524f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652510(undefined8 *param_1,long *param_2)
+static void nested_01652510(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(long *)(*param_2 + lVar1 * 4) = (long)*(int *)(*param_2 + lVar1 * 4);
+  *(int64_t *)(*param_2 + lVar1 * 4) = (int64_t)*(int *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_1652510(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652510((undefined8 *)cursor, (long *)state);
+    nested_01652510((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652580(undefined8 *param_1,long *param_2)
+static void nested_01652580(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -8317,11 +8317,11 @@ static void nested_01652580(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652580(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652580((undefined8 *)cursor, (long *)state);
+    nested_01652580((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016525b0(long *param_1,long *param_2)
+static void nested_016525b0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8331,20 +8331,20 @@ static void nested_016525b0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16525b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016525b0((long *)cursor, (long *)state);
+    nested_016525b0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016525f0(undefined8 *param_1,long *param_2)
+static void nested_016525f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8352,17 +8352,17 @@ static void nested_016525f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_16525f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016525f0((undefined8 *)cursor, (long *)state);
+    nested_016525f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652610(long *param_1,long *param_2)
+static void nested_01652610(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8372,20 +8372,20 @@ static void nested_01652610(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652610(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652610((long *)cursor, (long *)state);
+    nested_01652610((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652630(undefined8 *param_1,long *param_2)
+static void nested_01652630(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8393,17 +8393,17 @@ static void nested_01652630(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652630(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652630((undefined8 *)cursor, (long *)state);
+    nested_01652630((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652650(undefined8 *param_1,long *param_2)
+static void nested_01652650(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8411,17 +8411,17 @@ static void nested_01652650(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652650(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652650((undefined8 *)cursor, (long *)state);
+    nested_01652650((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652670(undefined8 *param_1,long *param_2)
+static void nested_01652670(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8429,17 +8429,17 @@ static void nested_01652670(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652670(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652670((undefined8 *)cursor, (long *)state);
+    nested_01652670((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652690(undefined8 *param_1,long *param_2)
+static void nested_01652690(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8447,17 +8447,17 @@ static void nested_01652690(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652690(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652690((undefined8 *)cursor, (long *)state);
+    nested_01652690((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016526b0(undefined8 *param_1,long *param_2)
+static void nested_016526b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8465,23 +8465,23 @@ static void nested_016526b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16526b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016526b0((undefined8 *)cursor, (long *)state);
+    nested_016526b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016526d0(undefined8 *param_1,long *param_2)
+static void nested_016526d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -8490,11 +8490,11 @@ static void nested_016526d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_16526d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016526d0((undefined8 *)cursor, (long *)state);
+    nested_016526d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652700(undefined8 *param_1,long *param_2)
+static void nested_01652700(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8502,17 +8502,17 @@ static void nested_01652700(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652700(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652700((undefined8 *)cursor, (long *)state);
+    nested_01652700((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652720(long *param_1,long *param_2)
+static void nested_01652720(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8522,20 +8522,20 @@ static void nested_01652720(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652720(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652720((long *)cursor, (long *)state);
+    nested_01652720((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652740(long *param_1,long *param_2)
+static void nested_01652740(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8545,28 +8545,28 @@ static void nested_01652740(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652740(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652740((long *)cursor, (long *)state);
+    nested_01652740((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652760(undefined8 *param_1,long *param_2)
+static void nested_01652760(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -8576,11 +8576,11 @@ static void nested_01652760(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652760(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652760((undefined8 *)cursor, (long *)state);
+    nested_01652760((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652790(long *param_1,long *param_2)
+static void nested_01652790(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8590,20 +8590,20 @@ static void nested_01652790(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652790(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652790((long *)cursor, (long *)state);
+    nested_01652790((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016527b0(undefined8 *param_1,long *param_2)
+static void nested_016527b0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8611,25 +8611,25 @@ static void nested_016527b0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_16527b0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016527b0((undefined8 *)cursor, (long *)state);
+    nested_016527b0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_016527d0(undefined8 *param_1,long *param_2)
+static ulong nested_016527d0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -8638,15 +8638,15 @@ static ulong nested_016527d0(undefined8 *param_1,long *param_2)
     *(ulong *)(lVar1 + lVar4 * 4) = (uVar2 & 0xffffffff) % (uVar3 & 0xffffffff);
     return (uVar2 & 0xffffffff) / (uVar3 & 0xffffffff);
   }
-  *(long *)(lVar1 + lVar4 * 4) = (long)uVar2 % (long)uVar3;
-  return (long)uVar2 / (long)uVar3;
+  *(int64_t *)(lVar1 + lVar4 * 4) = (int64_t)uVar2 % (int64_t)uVar3;
+  return (int64_t)uVar2 / (int64_t)uVar3;
 }
 
 static uintptr_t run_16527d0(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_016527d0((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_016527d0((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_01652810(undefined8 *param_1,long *param_2)
+static void nested_01652810(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8654,24 +8654,24 @@ static void nested_01652810(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652810(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652810((undefined8 *)cursor, (long *)state);
+    nested_01652810((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652830(undefined8 *param_1,long *param_2)
+static void nested_01652830(undefined8 *param_1,int64_t *param_2)
 
 {
   ulong *puVar1;
   byte bVar2;
-  long lVar3;
+  int64_t lVar3;
   
-  lVar3 = (long)*(short *)*param_1;
+  lVar3 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (ulong *)(*param_2 + lVar3 * 4);
   bVar2 = *(byte *)(*param_2 + 8 + lVar3 * 4) & 0x3f;
@@ -8680,11 +8680,11 @@ static void nested_01652830(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652830(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652830((undefined8 *)cursor, (long *)state);
+    nested_01652830((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652850(long *param_1,long *param_2)
+static void nested_01652850(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -8693,20 +8693,20 @@ static void nested_01652850(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(ulong *)(*param_2 + (long)sVar1 * 4) =
-       (ulong)*(ushort *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(ulong *)(*param_2 + (int64_t)sVar1 * 4) =
+       (ulong)*(ushort *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_1652850(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652850((long *)cursor, (long *)state);
+    nested_01652850((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652880(long *param_1,long *param_2)
+static void nested_01652880(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8716,33 +8716,33 @@ static void nested_01652880(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652880(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652880((long *)cursor, (long *)state);
+    nested_01652880((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016528d0(long *param_1,long *param_2)
+static void nested_016528d0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -8751,17 +8751,17 @@ static void nested_016528d0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_16528d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016528d0((long *)cursor, (long *)state);
+    nested_016528d0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652900(undefined8 *param_1,long *param_2)
+static void nested_01652900(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 >> (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -8769,11 +8769,11 @@ static void nested_01652900(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652900(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652900((undefined8 *)cursor, (long *)state);
+    nested_01652900((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652920(undefined8 *param_1,long *param_2)
+static void nested_01652920(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8781,17 +8781,17 @@ static void nested_01652920(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652920(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652920((undefined8 *)cursor, (long *)state);
+    nested_01652920((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652940(undefined8 *param_1,long *param_2)
+static void nested_01652940(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8799,17 +8799,17 @@ static void nested_01652940(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652940(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652940((undefined8 *)cursor, (long *)state);
+    nested_01652940((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652980(undefined8 *param_1,long *param_2)
+static void nested_01652980(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8817,17 +8817,17 @@ static void nested_01652980(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652980(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652980((undefined8 *)cursor, (long *)state);
+    nested_01652980((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016529a0(long *param_1,long *param_2)
+static void nested_016529a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8837,20 +8837,20 @@ static void nested_016529a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16529a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016529a0((long *)cursor, (long *)state);
+    nested_016529a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016529c0(long *param_1,long *param_2)
+static void nested_016529c0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -8860,20 +8860,20 @@ static void nested_016529c0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_16529c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016529c0((long *)cursor, (long *)state);
+    nested_016529c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_016529e0(undefined8 *param_1,long *param_2)
+static void nested_016529e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8881,17 +8881,17 @@ static void nested_016529e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_16529e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_016529e0((undefined8 *)cursor, (long *)state);
+    nested_016529e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652a00(undefined8 *param_1,long *param_2)
+static void nested_01652a00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8899,17 +8899,17 @@ static void nested_01652a00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652a00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652a00((undefined8 *)cursor, (long *)state);
+    nested_01652a00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652a20(undefined8 *param_1,long *param_2)
+static void nested_01652a20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8917,17 +8917,17 @@ static void nested_01652a20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652a20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652a20((undefined8 *)cursor, (long *)state);
+    nested_01652a20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652a40(undefined8 *param_1,long *param_2)
+static void nested_01652a40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8935,17 +8935,17 @@ static void nested_01652a40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652a40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652a40((undefined8 *)cursor, (long *)state);
+    nested_01652a40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652a60(undefined8 *param_1,long *param_2)
+static void nested_01652a60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8953,17 +8953,17 @@ static void nested_01652a60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652a60(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652a60((undefined8 *)cursor, (long *)state);
+    nested_01652a60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652a80(undefined8 *param_1,long *param_2)
+static void nested_01652a80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8971,17 +8971,17 @@ static void nested_01652a80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652a80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652a80((undefined8 *)cursor, (long *)state);
+    nested_01652a80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652aa0(undefined8 *param_1,long *param_2)
+static void nested_01652aa0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -8989,23 +8989,23 @@ static void nested_01652aa0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652aa0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652aa0((undefined8 *)cursor, (long *)state);
+    nested_01652aa0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652ac0(undefined8 *param_1,long *param_2)
+static void nested_01652ac0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -9014,17 +9014,17 @@ static void nested_01652ac0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652ac0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652ac0((undefined8 *)cursor, (long *)state);
+    nested_01652ac0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652af0(undefined8 *param_1,long *param_2)
+static void nested_01652af0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -9033,30 +9033,30 @@ static void nested_01652af0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652af0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652af0((undefined8 *)cursor, (long *)state);
+    nested_01652af0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652b20(undefined8 *param_1,long *param_2)
+static void nested_01652b20(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + 8 + lVar2 * 4) < *(long *)(lVar1 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + 8 + lVar2 * 4) < *(int64_t *)(lVar1 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_1652b20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652b20((undefined8 *)cursor, (long *)state);
+    nested_01652b20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652b50(undefined8 *param_1,long *param_2)
+static void nested_01652b50(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9064,17 +9064,17 @@ static void nested_01652b50(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652b50(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652b50((undefined8 *)cursor, (long *)state);
+    nested_01652b50((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652b70(undefined8 *param_1,long *param_2)
+static void nested_01652b70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9082,17 +9082,17 @@ static void nested_01652b70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652b70(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652b70((undefined8 *)cursor, (long *)state);
+    nested_01652b70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652b90(undefined8 *param_1,long *param_2)
+static void nested_01652b90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9100,17 +9100,17 @@ static void nested_01652b90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652b90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652b90((undefined8 *)cursor, (long *)state);
+    nested_01652b90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652bb0(long *param_1,long *param_2)
+static void nested_01652bb0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9120,20 +9120,20 @@ static void nested_01652bb0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652bb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652bb0((long *)cursor, (long *)state);
+    nested_01652bb0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652bd0(undefined8 *param_1,long *param_2)
+static void nested_01652bd0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9141,17 +9141,17 @@ static void nested_01652bd0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652bd0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652bd0((undefined8 *)cursor, (long *)state);
+    nested_01652bd0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652bf0(long *param_1,long *param_2)
+static void nested_01652bf0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9161,20 +9161,20 @@ static void nested_01652bf0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652bf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652bf0((long *)cursor, (long *)state);
+    nested_01652bf0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652c10(long *param_1,long *param_2)
+static void nested_01652c10(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -9183,32 +9183,32 @@ static void nested_01652c10(long *param_1,long *param_2)
   
   psVar2 = (short *)*param_1;
   sVar1 = *psVar2;
-  *param_1 = (uintptr_t)((long)(psVar2 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar2 + 1));
   uVar3 = *(undefined8 *)(psVar2 + 1);
-  *param_1 = (uintptr_t)((long)(psVar2 + 5));
-  *(undefined8 *)(*param_2 + (long)sVar1 * 4) = uVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar2 + 5));
+  *(undefined8 *)(*param_2 + (int64_t)sVar1 * 4) = uVar3;
   return;
 }
 
 static uintptr_t run_1652c10(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652c10((long *)cursor, (long *)state);
+    nested_01652c10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652c40(long *param_1,long *param_2)
+static void nested_01652c40(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -9218,11 +9218,11 @@ static void nested_01652c40(long *param_1,long *param_2)
 }
 
 static uintptr_t run_1652c40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652c40((long *)cursor, (long *)state);
+    nested_01652c40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652c80(long *param_1,long *param_2)
+static void nested_01652c80(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9232,20 +9232,20 @@ static void nested_01652c80(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652c80(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652c80((long *)cursor, (long *)state);
+    nested_01652c80((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652ca0(undefined8 *param_1,long *param_2)
+static void nested_01652ca0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9253,17 +9253,17 @@ static void nested_01652ca0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652ca0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652ca0((undefined8 *)cursor, (long *)state);
+    nested_01652ca0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652cc0(long *param_1,long *param_2)
+static void nested_01652cc0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9273,38 +9273,38 @@ static void nested_01652cc0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_1652cc0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652cc0((long *)cursor, (long *)state);
+    nested_01652cc0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652ce0(undefined8 *param_1,long *param_2)
+static void nested_01652ce0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long *plVar1;
-  long lVar2;
+  int64_t *plVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  plVar1 = (long *)(*param_2 + lVar2 * 4);
-  *plVar1 = *plVar1 - *(long *)(*param_2 + 8 + lVar2 * 4);
+  plVar1 = (int64_t *)(*param_2 + lVar2 * 4);
+  *plVar1 = *plVar1 - *(int64_t *)(*param_2 + 8 + lVar2 * 4);
   return;
 }
 
 static uintptr_t run_1652ce0(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652ce0((undefined8 *)cursor, (long *)state);
+    nested_01652ce0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652d00(undefined8 *param_1,long *param_2)
+static void nested_01652d00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9312,17 +9312,17 @@ static void nested_01652d00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_1652d00(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652d00((undefined8 *)cursor, (long *)state);
+    nested_01652d00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652d20(undefined8 *param_1,long *param_2)
+static void nested_01652d20(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9330,17 +9330,17 @@ static void nested_01652d20(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_1652d20(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652d20((undefined8 *)cursor, (long *)state);
+    nested_01652d20((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652d40(undefined8 *param_1,long *param_2)
+static void nested_01652d40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9348,23 +9348,23 @@ static void nested_01652d40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_1652d40(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652d40((undefined8 *)cursor, (long *)state);
+    nested_01652d40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652d60(undefined8 *param_1,long *param_2)
+static void nested_01652d60(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -9373,11 +9373,11 @@ static void nested_01652d60(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_1652d60(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652d60((undefined8 *)cursor, (long *)state);
+    nested_01652d60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_01652d90(long *param_1,long *param_2)
+static void nested_01652d90(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -9386,35 +9386,35 @@ static void nested_01652d90(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_1652d90(uintptr_t *cursor, uintptr_t *state) {
-    nested_01652d90((long *)cursor, (long *)state);
+    nested_01652d90((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ad910(undefined8 *param_1,long *param_2)
+static void nested_025ad910(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(ulong *)(*param_2 + lVar1 * 4) = (ulong)*(uint *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_25ad910(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ad910((undefined8 *)cursor, (long *)state);
+    nested_025ad910((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ad9e0(undefined8 *param_1,long *param_2)
+static void nested_025ad9e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9422,17 +9422,17 @@ static void nested_025ad9e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25ad9e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ad9e0((undefined8 *)cursor, (long *)state);
+    nested_025ad9e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adb60(long *param_1,long *param_2)
+static void nested_025adb60(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9442,20 +9442,20 @@ static void nested_025adb60(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25adb60(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adb60((long *)cursor, (long *)state);
+    nested_025adb60((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adc10(undefined8 *param_1,long *param_2)
+static void nested_025adc10(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9463,23 +9463,23 @@ static void nested_025adc10(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25adc10(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adc10((undefined8 *)cursor, (long *)state);
+    nested_025adc10((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adc70(undefined8 *param_1,long *param_2)
+static void nested_025adc70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 >> (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -9487,11 +9487,11 @@ static void nested_025adc70(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25adc70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adc70((undefined8 *)cursor, (long *)state);
+    nested_025adc70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adc90(undefined8 *param_1,long *param_2)
+static void nested_025adc90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9499,17 +9499,17 @@ static void nested_025adc90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25adc90(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adc90((undefined8 *)cursor, (long *)state);
+    nested_025adc90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adcf0(undefined8 *param_1,long *param_2)
+static void nested_025adcf0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9517,17 +9517,17 @@ static void nested_025adcf0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25adcf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adcf0((undefined8 *)cursor, (long *)state);
+    nested_025adcf0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025adfb0(undefined8 *param_1,long *param_2)
+static void nested_025adfb0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9535,17 +9535,17 @@ static void nested_025adfb0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25adfb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025adfb0((undefined8 *)cursor, (long *)state);
+    nested_025adfb0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae0a0(undefined8 *param_1,long *param_2)
+static void nested_025ae0a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9553,17 +9553,17 @@ static void nested_025ae0a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25ae0a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae0a0((undefined8 *)cursor, (long *)state);
+    nested_025ae0a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae0e0(undefined8 *param_1,long *param_2)
+static void nested_025ae0e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9571,17 +9571,17 @@ static void nested_025ae0e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25ae0e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae0e0((undefined8 *)cursor, (long *)state);
+    nested_025ae0e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae140(long *param_1,long *param_2)
+static void nested_025ae140(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -9590,32 +9590,32 @@ static void nested_025ae140(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_25ae140(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae140((long *)cursor, (long *)state);
+    nested_025ae140((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae1c0(long *param_1,long *param_2)
+static void nested_025ae1c0(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -9624,11 +9624,11 @@ static void nested_025ae1c0(long *param_1,long *param_2)
 }
 
 static uintptr_t run_25ae1c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae1c0((long *)cursor, (long *)state);
+    nested_025ae1c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae200(long *param_1,long *param_2)
+static void nested_025ae200(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9638,33 +9638,33 @@ static void nested_025ae200(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25ae200(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae200((long *)cursor, (long *)state);
+    nested_025ae200((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae220(long *param_1,long *param_2)
+static void nested_025ae220(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -9674,11 +9674,11 @@ static void nested_025ae220(long *param_1,long *param_2)
 }
 
 static uintptr_t run_25ae220(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae220((long *)cursor, (long *)state);
+    nested_025ae220((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae2f0(undefined8 *param_1,long *param_2)
+static void nested_025ae2f0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9686,17 +9686,17 @@ static void nested_025ae2f0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25ae2f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae2f0((undefined8 *)cursor, (long *)state);
+    nested_025ae2f0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae360(long *param_1,long *param_2)
+static void nested_025ae360(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -9707,23 +9707,23 @@ static void nested_025ae360(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar2 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar2 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_25ae360(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae360((long *)cursor, (long *)state);
+    nested_025ae360((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae540(long *param_1,long *param_2)
+static void nested_025ae540(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -9732,20 +9732,20 @@ static void nested_025ae540(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(char *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_25ae540(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae540((long *)cursor, (long *)state);
+    nested_025ae540((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae700(undefined8 *param_1,long *param_2)
+static void nested_025ae700(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9753,17 +9753,17 @@ static void nested_025ae700(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25ae700(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae700((undefined8 *)cursor, (long *)state);
+    nested_025ae700((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025ae9a0(long *param_1,long *param_2)
+static void nested_025ae9a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9773,28 +9773,28 @@ static void nested_025ae9a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25ae9a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025ae9a0((long *)cursor, (long *)state);
+    nested_025ae9a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aea00(undefined8 *param_1,long *param_2)
+static void nested_025aea00(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -9804,11 +9804,11 @@ static void nested_025aea00(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25aea00(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aea00((undefined8 *)cursor, (long *)state);
+    nested_025aea00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aeaf0(long *param_1,long *param_2)
+static void nested_025aeaf0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9818,39 +9818,39 @@ static void nested_025aeaf0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25aeaf0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aeaf0((long *)cursor, (long *)state);
+    nested_025aeaf0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aeb80(undefined8 *param_1,long *param_2)
+static void nested_025aeb80(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + 8 + lVar2 * 4) < *(long *)(lVar1 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + 8 + lVar2 * 4) < *(int64_t *)(lVar1 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_25aeb80(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aeb80((undefined8 *)cursor, (long *)state);
+    nested_025aeb80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aed20(long *param_1,long *param_2)
+static void nested_025aed20(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -9860,20 +9860,20 @@ static void nested_025aed20(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25aed20(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aed20((long *)cursor, (long *)state);
+    nested_025aed20((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aef70(undefined8 *param_1,long *param_2)
+static void nested_025aef70(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9881,17 +9881,17 @@ static void nested_025aef70(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25aef70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aef70((undefined8 *)cursor, (long *)state);
+    nested_025aef70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025aef90(undefined8 *param_1,long *param_2)
+static void nested_025aef90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9899,17 +9899,17 @@ static void nested_025aef90(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25aef90(uintptr_t *cursor, uintptr_t *state) {
-    nested_025aef90((undefined8 *)cursor, (long *)state);
+    nested_025aef90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af040(undefined8 *param_1,long *param_2)
+static void nested_025af040(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9917,17 +9917,17 @@ static void nested_025af040(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25af040(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af040((undefined8 *)cursor, (long *)state);
+    nested_025af040((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af180(undefined8 *param_1,long *param_2)
+static void nested_025af180(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9935,23 +9935,23 @@ static void nested_025af180(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25af180(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af180((undefined8 *)cursor, (long *)state);
+    nested_025af180((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af1a0(undefined8 *param_1,long *param_2)
+static void nested_025af1a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 & *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -9959,11 +9959,11 @@ static void nested_025af1a0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25af1a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af1a0((undefined8 *)cursor, (long *)state);
+    nested_025af1a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af3a0(undefined8 *param_1,long *param_2)
+static void nested_025af3a0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9971,17 +9971,17 @@ static void nested_025af3a0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25af3a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af3a0((undefined8 *)cursor, (long *)state);
+    nested_025af3a0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af3c0(undefined8 *param_1,long *param_2)
+static void nested_025af3c0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -9989,17 +9989,17 @@ static void nested_025af3c0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25af3c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af3c0((undefined8 *)cursor, (long *)state);
+    nested_025af3c0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025af4f0(long *param_1,long *param_2)
+static void nested_025af4f0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10008,19 +10008,19 @@ static void nested_025af4f0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_25af4f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025af4f0((long *)cursor, (long *)state);
+    nested_025af4f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afa10(long *param_1,long *param_2)
+static void nested_025afa10(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10031,23 +10031,23 @@ static void nested_025afa10(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_25afa10(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afa10((long *)cursor, (long *)state);
+    nested_025afa10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afa50(long *param_1,long *param_2)
+static void nested_025afa50(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10056,20 +10056,20 @@ static void nested_025afa50(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_25afa50(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afa50((long *)cursor, (long *)state);
+    nested_025afa50((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afae0(undefined8 *param_1,long *param_2)
+static void nested_025afae0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10077,17 +10077,17 @@ static void nested_025afae0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25afae0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afae0((undefined8 *)cursor, (long *)state);
+    nested_025afae0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afb00(undefined8 *param_1,long *param_2)
+static void nested_025afb00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10095,25 +10095,25 @@ static void nested_025afb00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25afb00(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afb00((undefined8 *)cursor, (long *)state);
+    nested_025afb00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_025afca0(undefined8 *param_1,long *param_2)
+static ulong nested_025afca0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -10122,15 +10122,15 @@ static ulong nested_025afca0(undefined8 *param_1,long *param_2)
     *(ulong *)(lVar1 + lVar4 * 4) = (uVar2 & 0xffffffff) % (uVar3 & 0xffffffff);
     return (uVar2 & 0xffffffff) / (uVar3 & 0xffffffff);
   }
-  *(long *)(lVar1 + lVar4 * 4) = (long)uVar2 % (long)uVar3;
-  return (long)uVar2 / (long)uVar3;
+  *(int64_t *)(lVar1 + lVar4 * 4) = (int64_t)uVar2 % (int64_t)uVar3;
+  return (int64_t)uVar2 / (int64_t)uVar3;
 }
 
 static uintptr_t run_25afca0(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_025afca0((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_025afca0((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_025afd40(long *param_1,long *param_2)
+static void nested_025afd40(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10139,42 +10139,42 @@ static void nested_025afd40(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_25afd40(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afd40((long *)cursor, (long *)state);
+    nested_025afd40((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afd70(undefined8 *param_1,long *param_2)
+static void nested_025afd70(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   *(ulong *)(*param_2 + lVar1 * 4) = (ulong)*(uint *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_25afd70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afd70((undefined8 *)cursor, (long *)state);
+    nested_025afd70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afd90(undefined8 *param_1,long *param_2)
+static void nested_025afd90(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 | *(uint *)(*param_2 + 4 + lVar2 * 4);
@@ -10182,11 +10182,11 @@ static void nested_025afd90(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25afd90(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afd90((undefined8 *)cursor, (long *)state);
+    nested_025afd90((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afe10(long *param_1,long *param_2)
+static void nested_025afe10(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10195,20 +10195,20 @@ static void nested_025afe10(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined4 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined4 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_25afe10(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afe10((long *)cursor, (long *)state);
+    nested_025afe10((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afe40(undefined8 *param_1,long *param_2)
+static void nested_025afe40(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10216,17 +10216,17 @@ static void nested_025afe40(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25afe40(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afe40((undefined8 *)cursor, (long *)state);
+    nested_025afe40((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afe60(undefined8 *param_1,long *param_2)
+static void nested_025afe60(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10234,17 +10234,17 @@ static void nested_025afe60(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25afe60(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afe60((undefined8 *)cursor, (long *)state);
+    nested_025afe60((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afe80(undefined8 *param_1,long *param_2)
+static void nested_025afe80(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10252,17 +10252,17 @@ static void nested_025afe80(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25afe80(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afe80((undefined8 *)cursor, (long *)state);
+    nested_025afe80((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025afea0(undefined8 *param_1,long *param_2)
+static void nested_025afea0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10270,17 +10270,17 @@ static void nested_025afea0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25afea0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025afea0((undefined8 *)cursor, (long *)state);
+    nested_025afea0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025affe0(undefined8 *param_1,long *param_2)
+static void nested_025affe0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10288,23 +10288,23 @@ static void nested_025affe0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25affe0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025affe0((undefined8 *)cursor, (long *)state);
+    nested_025affe0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b00d0(undefined8 *param_1,long *param_2)
+static void nested_025b00d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
-  long lVar2;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   puVar1 = (uint *)(*param_2 + lVar2 * 4);
   *puVar1 = *puVar1 >> (*(byte *)(*param_2 + 4 + lVar2 * 4) & 0x1f);
@@ -10312,11 +10312,11 @@ static void nested_025b00d0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25b00d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b00d0((undefined8 *)cursor, (long *)state);
+    nested_025b00d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b00f0(long *param_1,long *param_2)
+static void nested_025b00f0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -10326,20 +10326,20 @@ static void nested_025b00f0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25b00f0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b00f0((long *)cursor, (long *)state);
+    nested_025b00f0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0130(long *param_1,long *param_2)
+static void nested_025b0130(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -10349,20 +10349,20 @@ static void nested_025b0130(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25b0130(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0130((long *)cursor, (long *)state);
+    nested_025b0130((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0150(undefined8 *param_1,long *param_2)
+static void nested_025b0150(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10370,17 +10370,17 @@ static void nested_025b0150(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25b0150(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0150((undefined8 *)cursor, (long *)state);
+    nested_025b0150((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0210(long *param_1,long *param_2)
+static void nested_025b0210(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10389,20 +10389,20 @@ static void nested_025b0210(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_25b0210(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0210((long *)cursor, (long *)state);
+    nested_025b0210((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0430(long *param_1,long *param_2)
+static void nested_025b0430(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -10412,20 +10412,20 @@ static void nested_025b0430(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25b0430(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0430((long *)cursor, (long *)state);
+    nested_025b0430((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0500(undefined8 *param_1,long *param_2)
+static void nested_025b0500(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10433,17 +10433,17 @@ static void nested_025b0500(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25b0500(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0500((undefined8 *)cursor, (long *)state);
+    nested_025b0500((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b05a0(long *param_1,long *param_2)
+static void nested_025b05a0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10452,32 +10452,32 @@ static void nested_025b05a0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_25b05a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b05a0((long *)cursor, (long *)state);
+    nested_025b05a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0620(long *param_1,long *param_2)
+static void nested_025b0620(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -10486,11 +10486,11 @@ static void nested_025b0620(long *param_1,long *param_2)
 }
 
 static uintptr_t run_25b0620(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0620((long *)cursor, (long *)state);
+    nested_025b0620((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0660(undefined8 *param_1,long *param_2)
+static void nested_025b0660(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10498,30 +10498,30 @@ static void nested_025b0660(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25b0660(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0660((undefined8 *)cursor, (long *)state);
+    nested_025b0660((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0680(long *param_1,long *param_2)
+static void nested_025b0680(int64_t *param_1,int64_t *param_2)
 
 {
   uint uVar1;
   uint uVar2;
   short *psVar3;
-  long lVar4;
-  long lVar5;
+  int64_t lVar4;
+  int64_t lVar5;
   
   psVar3 = (short *)*param_1;
-  lVar5 = (long)*psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  lVar5 = (int64_t)*psVar3;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar1 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
   lVar4 = *param_2;
   uVar2 = *(uint *)(lVar4 + lVar5 * 4);
   *(undefined4 *)(lVar4 + lVar5 * 4) = 0;
@@ -10531,11 +10531,11 @@ static void nested_025b0680(long *param_1,long *param_2)
 }
 
 static uintptr_t run_25b0680(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0680((long *)cursor, (long *)state);
+    nested_025b0680((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0750(undefined8 *param_1,long *param_2)
+static void nested_025b0750(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10543,17 +10543,17 @@ static void nested_025b0750(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25b0750(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0750((undefined8 *)cursor, (long *)state);
+    nested_025b0750((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b07c0(long *param_1,long *param_2)
+static void nested_025b07c0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10564,31 +10564,31 @@ static void nested_025b07c0(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar2 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar1 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar2 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_25b07c0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b07c0((long *)cursor, (long *)state);
+    nested_025b07c0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static ulong nested_025b0960(undefined8 *param_1,long *param_2)
+static ulong nested_025b0960(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   ulong uVar2;
   ulong uVar3;
-  long lVar4;
+  int64_t lVar4;
   
-  lVar4 = (long)*(short *)*param_1;
+  lVar4 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   uVar2 = *(ulong *)(lVar1 + lVar4 * 4);
@@ -10602,10 +10602,10 @@ static ulong nested_025b0960(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25b0960(uintptr_t *cursor, uintptr_t *state) {
-    return (uintptr_t)nested_025b0960((undefined8 *)cursor, (long *)state);
+    return (uintptr_t)nested_025b0960((undefined8 *)cursor, (int64_t *)state);
 }
 
-static void nested_025b0a70(long *param_1,long *param_2)
+static void nested_025b0a70(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10614,26 +10614,26 @@ static void nested_025b0a70(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined8 *)(*param_2 + (long)sVar1 * 4) =
-       *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined8 *)(*param_2 + (int64_t)sVar1 * 4) =
+       *(undefined8 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_25b0a70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0a70((long *)cursor, (long *)state);
+    nested_025b0a70((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0ce0(undefined8 *param_1,long *param_2)
+static void nested_025b0ce0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -10642,11 +10642,11 @@ static void nested_025b0ce0(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25b0ce0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0ce0((undefined8 *)cursor, (long *)state);
+    nested_025b0ce0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0e00(undefined8 *param_1,long *param_2)
+static void nested_025b0e00(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10654,42 +10654,42 @@ static void nested_025b0e00(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25b0e00(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0e00((undefined8 *)cursor, (long *)state);
+    nested_025b0e00((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b0fe0(undefined8 *param_1,long *param_2)
+static void nested_025b0fe0(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
-       (uint)(*(long *)(lVar1 + 8 + lVar2 * 4) < *(long *)(lVar1 + lVar2 * 4));
+       (uint)(*(int64_t *)(lVar1 + 8 + lVar2 * 4) < *(int64_t *)(lVar1 + lVar2 * 4));
   return;
 }
 
 static uintptr_t run_25b0fe0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b0fe0((undefined8 *)cursor, (long *)state);
+    nested_025b0fe0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1150(undefined8 *param_1,long *param_2)
+static void nested_025b1150(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(uint *)(lVar1 + lVar2 * 4) =
@@ -10698,11 +10698,11 @@ static void nested_025b1150(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25b1150(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1150((undefined8 *)cursor, (long *)state);
+    nested_025b1150((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b13d0(undefined8 *param_1,long *param_2)
+static void nested_025b13d0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10710,17 +10710,17 @@ static void nested_025b13d0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25b13d0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b13d0((undefined8 *)cursor, (long *)state);
+    nested_025b13d0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b15e0(undefined8 *param_1,long *param_2)
+static void nested_025b15e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10728,17 +10728,17 @@ static void nested_025b15e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25b15e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b15e0((undefined8 *)cursor, (long *)state);
+    nested_025b15e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b16a0(long *param_1,long *param_2)
+static void nested_025b16a0(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -10748,36 +10748,36 @@ static void nested_025b16a0(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25b16a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b16a0((long *)cursor, (long *)state);
+    nested_025b16a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1710(undefined8 *param_1,long *param_2)
+static void nested_025b1710(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
+  int64_t lVar1;
   
-  lVar1 = (long)*(short *)*param_1;
+  lVar1 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  *(long *)(*param_2 + lVar1 * 4) = (long)*(int *)(*param_2 + lVar1 * 4);
+  *(int64_t *)(*param_2 + lVar1 * 4) = (int64_t)*(int *)(*param_2 + lVar1 * 4);
   return;
 }
 
 static uintptr_t run_25b1710(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1710((undefined8 *)cursor, (long *)state);
+    nested_025b1710((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b17e0(undefined8 *param_1,long *param_2)
+static void nested_025b17e0(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10785,17 +10785,17 @@ static void nested_025b17e0(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = *puVar1 ^ *(uint *)(param_2 + 2);
   return;
 }
 
 static uintptr_t run_25b17e0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b17e0((undefined8 *)cursor, (long *)state);
+    nested_025b17e0((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1800(undefined8 *param_1,long *param_2)
+static void nested_025b1800(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10803,17 +10803,17 @@ static void nested_025b1800(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 = ~*puVar1;
   return;
 }
 
 static uintptr_t run_25b1800(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1800((undefined8 *)cursor, (long *)state);
+    nested_025b1800((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1950(long *param_1,long *param_2)
+static void nested_025b1950(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10822,25 +10822,25 @@ static void nested_025b1950(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(undefined4 *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined4 *)(*param_2 + (long)sVar1 * 4) = uVar2;
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined4 *)(*param_2 + (int64_t)sVar1 * 4) = uVar2;
   return;
 }
 
 static uintptr_t run_25b1950(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1950((long *)cursor, (long *)state);
+    nested_025b1950((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1a70(undefined8 *param_1,long *param_2)
+static void nested_025b1a70(undefined8 *param_1,int64_t *param_2)
 
 {
-  long lVar1;
-  long lVar2;
+  int64_t lVar1;
+  int64_t lVar2;
   
-  lVar2 = (long)*(short *)*param_1;
+  lVar2 = (int64_t)*(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
   lVar1 = *param_2;
   *(undefined4 *)(lVar1 + lVar2 * 4) =
@@ -10849,11 +10849,11 @@ static void nested_025b1a70(undefined8 *param_1,long *param_2)
 }
 
 static uintptr_t run_25b1a70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1a70((undefined8 *)cursor, (long *)state);
+    nested_025b1a70((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1e70(long *param_1,long *param_2)
+static void nested_025b1e70(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10864,23 +10864,23 @@ static void nested_025b1e70(long *param_1,long *param_2)
   
   psVar5 = (short *)*param_1;
   sVar1 = *psVar5;
-  *param_1 = (uintptr_t)((long)(psVar5 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 1));
   sVar2 = psVar5[1];
-  *param_1 = (uintptr_t)((long)(psVar5 + 2));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 2));
   iVar3 = *(int *)(psVar5 + 2);
-  *param_1 = (uintptr_t)((long)(psVar5 + 4));
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 4));
   iVar4 = *(int *)(psVar5 + 4);
-  *param_1 = (uintptr_t)((long)(psVar5 + 6));
-  *(int *)(*param_2 + (long)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (long)sVar1 * 4) + iVar4;
+  *param_1 = (uintptr_t)((int64_t)(psVar5 + 6));
+  *(int *)(*param_2 + (int64_t)sVar2 * 4) = iVar3 * *(int *)(*param_2 + (int64_t)sVar1 * 4) + iVar4;
   return;
 }
 
 static uintptr_t run_25b1e70(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1e70((long *)cursor, (long *)state);
+    nested_025b1e70((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b1eb0(long *param_1,long *param_2)
+static void nested_025b1eb0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10889,20 +10889,20 @@ static void nested_025b1eb0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(long *)(*param_2 + (long)sVar1 * 4) =
-       (long)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(int64_t *)(*param_2 + (int64_t)sVar1 * 4) =
+       (int64_t)*(short *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]);
   return;
 }
 
 static uintptr_t run_25b1eb0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b1eb0((long *)cursor, (long *)state);
+    nested_025b1eb0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b2160(undefined8 *param_1,long *param_2)
+static void nested_025b2160(undefined8 *param_1,int64_t *param_2)
 
 {
   uint *puVar1;
@@ -10910,17 +10910,17 @@ static void nested_025b2160(undefined8 *param_1,long *param_2)
   
   sVar2 = *(short *)*param_1;
   *param_1 = (uintptr_t)((short *)*param_1 + 1);
-  puVar1 = (uint *)(*param_2 + (long)sVar2 * 4);
+  puVar1 = (uint *)(*param_2 + (int64_t)sVar2 * 4);
   *puVar1 =rol32(*puVar1, *(byte *)(param_2 + 2) & 0x1f);
   return;
 }
 
 static uintptr_t run_25b2160(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b2160((undefined8 *)cursor, (long *)state);
+    nested_025b2160((undefined8 *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b2180(long *param_1,long *param_2)
+static void nested_025b2180(int64_t *param_1,int64_t *param_2)
 
 {
   int *piVar1;
@@ -10930,20 +10930,20 @@ static void nested_025b2180(long *param_1,long *param_2)
   
   psVar4 = (short *)*param_1;
   sVar2 = *psVar4;
-  *param_1 = (uintptr_t)((long)(psVar4 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 1));
   iVar3 = *(int *)(psVar4 + 1);
-  *param_1 = (uintptr_t)((long)(psVar4 + 3));
-  piVar1 = (int *)(*param_2 + (long)sVar2 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar4 + 3));
+  piVar1 = (int *)(*param_2 + (int64_t)sVar2 * 4);
   *piVar1 = *piVar1 + iVar3;
   return;
 }
 
 static uintptr_t run_25b2180(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b2180((long *)cursor, (long *)state);
+    nested_025b2180((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 
-static void nested_025b21a0(long *param_1,long *param_2)
+static void nested_025b21a0(int64_t *param_1,int64_t *param_2)
 
 {
   short sVar1;
@@ -10952,16 +10952,16 @@ static void nested_025b21a0(long *param_1,long *param_2)
   
   psVar3 = (short *)*param_1;
   sVar1 = *psVar3;
-  *param_1 = (uintptr_t)((long)(psVar3 + 1));
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 1));
   uVar2 = *(uint *)(psVar3 + 1);
-  *param_1 = (uintptr_t)((long)(psVar3 + 3));
-  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (long)sVar1 * 4) + param_2[1]) =
-       *(undefined2 *)(*param_2 + 4 + (long)sVar1 * 4);
+  *param_1 = (uintptr_t)((int64_t)(psVar3 + 3));
+  *(undefined2 *)((ulong)uVar2 + (ulong)*(uint *)(*param_2 + (int64_t)sVar1 * 4) + param_2[1]) =
+       *(undefined2 *)(*param_2 + 4 + (int64_t)sVar1 * 4);
   return;
 }
 
 static uintptr_t run_25b21a0(uintptr_t *cursor, uintptr_t *state) {
-    nested_025b21a0((long *)cursor, (long *)state);
+    nested_025b21a0((int64_t *)cursor, (int64_t *)state);
     return 0;
 }
 

@@ -15,6 +15,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"path"
 	"path/filepath"
 	"runtime"
 	"strconv"
@@ -22,7 +23,7 @@ import (
 	"time"
 )
 
-const currentVersion = "2026.11.23.1"
+const currentVersion = "2026.11.24.1"
 const maxUpdateSize = 256 << 20
 
 type updatePackage struct {
@@ -127,6 +128,10 @@ func newerVersion(candidate, current string) (bool, error) {
 }
 
 func unpackUpdate(data []byte) ([]byte, error) {
+	return unpackUpdateForPlatform(data, runtime.GOOS, runtime.GOARCH)
+}
+
+func unpackUpdateForPlatform(data []byte, goos, goarch string) ([]byte, error) {
 	compressed, err := gzip.NewReader(bytes.NewReader(data))
 	if err != nil {
 		return nil, fmt.Errorf("update is not a gzip tarball: %w", err)
@@ -142,8 +147,12 @@ func unpackUpdate(data []byte) ([]byte, error) {
 		if err != nil {
 			return nil, err
 		}
-		clean := filepath.Clean(header.Name)
-		if clean != "spotirip-lossless" && clean != "spotirip-lossless-linux-amd64/spotirip-lossless" {
+		clean := path.Clean(header.Name)
+		executableName := "spotirip-lossless"
+		if goos == "windows" {
+			executableName += ".exe"
+		}
+		if clean != executableName && clean != fmt.Sprintf("spotirip-lossless-%s-%s/%s", goos, goarch, executableName) {
 			continue
 		}
 		if header.Typeflag != tar.TypeReg || binary != nil {

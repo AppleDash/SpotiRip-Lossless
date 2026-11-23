@@ -19,18 +19,19 @@ Protocol and cipher resources are embedded in the executable. The application do
 
 ### Runtime
 
-- Linux on x86-64
+- Linux x86-64 or Windows x86-64
 - A Spotify Premium account
-- `ffmpeg` for video processing and most metadata operations
-- `ffprobe` for duplicate detection and `--verify`
-- System libraries: `libstdc++`, `libmpg123`, `libFLAC`, `libasound`, `libvorbis`, and `libogg`
+- `ffmpeg` and `ffprobe` available on `PATH` for video processing, most metadata operations, duplicate detection, and `--verify`
+- Linux system libraries: `libstdc++`, `libmpg123`, `libFLAC`, `libasound`, `libvorbis`, and `libogg`
 - A user-supplied Widevine L3 `.wvd` device file for music videos
+
+The Windows executable statically includes its MinGW/C++ runtime; no MinGW installation is needed to run it.
 
 ### Build
 
 - Go 1.27 or newer
 - C and C++17 compilers with CGo enabled
-- Development packages for the libraries listed above
+- The Linux development packages listed above, or MinGW-w64 for Windows builds
 
 Python is not required to use the downloader. It is only used to collect third-party license notices during a release build.
 
@@ -44,13 +45,21 @@ cd spotirip-lossless-linux-amd64
 ./spotirip-lossless --version
 ```
 
+On Windows, download the Windows package and run these commands in CMD:
+
+```bat
+tar -xzf spotirip-lossless-windows-amd64.tar.gz
+cd spotirip-lossless-windows-amd64
+spotirip-lossless.exe --version
+```
+
 The release archive contains the executable, documentation, license, and notices. It does not contain credentials, WVD files, reference captures, or test downloads.
 
 ## Quick start
 
 ### Sign in with Spotify
 
-SpotiRip Lossless requires your own Spotify Premium account for both audio and video downloads; anonymous downloads are not supported. Start a download with a Spotify link:
+SpotiRip Lossless requires your own Spotify Premium account for both audio and video downloads; anonymous downloads are not supported. Start a download with a Spotify link. On Windows, use `spotirip-lossless.exe` instead of `./spotirip-lossless` in all examples:
 
 ```bash
 ./spotirip-lossless "https://open.spotify.com/track/TRACK_ID"
@@ -177,6 +186,15 @@ The updater verifies the archive size and SHA-256, runs the new executable's sel
 ```bash
 go test ./cmd/... ./internal/...
 go build -o bin/spotirip-lossless ./cmd/spotirip-lossless
+```
+
+To build the Windows executable from Linux with MinGW-w64:
+
+```bash
+GOOS=windows GOARCH=amd64 CGO_ENABLED=1 \
+  CC=x86_64-w64-mingw32-gcc CXX=x86_64-w64-mingw32-g++ \
+  go build -ldflags="-linkmode=external" \
+  -o bin/spotirip-lossless.exe ./cmd/spotirip-lossless
 ```
 
 Go dependencies are vendored. The semantic engine resources are embedded under `internal/spotifyclean/native`.

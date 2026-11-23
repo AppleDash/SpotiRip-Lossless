@@ -2,6 +2,8 @@
 
 SpotiRip Lossless can verify and install a complete release from an HTTPS manifest. This also distributes updated embedded engine resources; no separate resource replacement is needed.
 
+On Windows, run `spotirip-lossless.exe` instead of `./spotirip-lossless`; in CMD, set environment variables with `set NAME=value` instead of `export`.
+
 ## Initial manifest configuration
 
 ```bash
@@ -34,7 +36,7 @@ The updater:
 
 1. downloads at most 1 MiB of manifest over HTTPS,
 2. compares the numeric application version,
-3. selects only `linux-amd64`,
+3. selects the package for the current operating system and architecture,
 4. verifies the archive size and SHA-256,
 5. extracts only the expected regular executable, limited to 256 MiB,
 6. runs the new executable's real `--self-test` with the same credential file,
@@ -47,6 +49,8 @@ If the checksum, extraction, or self-test fails, the existing executable remains
 ```text
 spotirip-lossless.backup-<timestamp>
 ```
+
+On Windows, the executable name retains its `.exe` suffix before `.backup-<timestamp>`.
 
 The program directory must be writable by the current user. The updater does not use `sudo` or install a background service.
 

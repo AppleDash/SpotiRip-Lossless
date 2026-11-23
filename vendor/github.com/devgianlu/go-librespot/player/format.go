@@ -4,6 +4,11 @@ import (
 	metadatapb "github.com/devgianlu/go-librespot/proto/spotify/metadata"
 )
 
+const (
+	SampleRate = 44100
+	Channels   = 2
+)
+
 func GetFormatBitrate(format metadatapb.AudioFile_Format) int {
 	switch format {
 	case metadatapb.AudioFile_MP3_96:

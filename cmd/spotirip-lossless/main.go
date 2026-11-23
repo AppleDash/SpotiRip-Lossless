@@ -14,6 +14,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"sort"
 	"strconv"
 	"strings"
@@ -240,10 +241,27 @@ func audioExtension(format metadatapb.AudioFile_Format) string {
 }
 
 func safeName(value string) string {
+	return safeNameForOS(value, runtime.GOOS)
+}
+
+func safeNameForOS(value, goos string) string {
 	value = regexp.MustCompile(`[\x00-\x1f/\\]+`).ReplaceAllString(value, "_")
+	if goos == "windows" {
+		value = regexp.MustCompile(`[<>:"|?*]+`).ReplaceAllString(value, "_")
+	}
 	value = strings.Trim(strings.TrimSpace(value), ".")
 	if value == "" {
 		return "Unknown"
+	}
+	if goos == "windows" {
+		base := strings.ToUpper(strings.SplitN(value, ".", 2)[0])
+		reserved := base == "CON" || base == "PRN" || base == "AUX" || base == "NUL" || base == "CLOCK$"
+		if len(base) == 4 && (strings.HasPrefix(base, "COM") || strings.HasPrefix(base, "LPT")) && base[3] >= '1' && base[3] <= '9' {
+			reserved = true
+		}
+		if reserved {
+			value = "_" + value
+		}
 	}
 	if len(value) > 160 {
 		value = value[:160]

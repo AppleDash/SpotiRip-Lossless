@@ -9,7 +9,11 @@
 #include <cstdlib>
 #include <cstring>
 #include <string>
+#ifdef _WIN32
+#include <windows.h>
+#else
 #include <sys/mman.h>
+#endif
 #include <unordered_map>
 #include <utility>
 #include <vector>
@@ -159,6 +163,7 @@ struct clean_runtime {
     std::vector<Instruction> instructions;
     std::unordered_map<uint64_t, size_t> addresses;
     std::vector<Range> ranges;
+    std::vector<Range> allocations;
     std::vector<uint8_t> entropyOverride;
     uint64_t history[32]{};
     size_t historyCount = 0;
@@ -177,19 +182,49 @@ struct clean_runtime {
     }
 
     bool map(uint64_t address, size_t size) {
+#ifdef _WIN32
+        constexpr uint64_t granularityMask = 0xffff;
+        const uint64_t reserveStart = address & ~granularityMask;
+        const uint64_t reserveEnd = (address + size + granularityMask) & ~granularityMask;
+        bool covered = false;
+        for (const Range &allocation : allocations) {
+            if (allocation.start <= reserveStart && allocation.end >= reserveEnd) {
+                covered = true;
+                break;
+            }
+        }
+        if (!covered && VirtualAlloc(reinterpret_cast<LPVOID>(reserveStart), reserveEnd - reserveStart,
+                                     MEM_RESERVE, PAGE_NOACCESS) == nullptr) {
+            return fail("memory mapping at %#llx: Windows error %lu", address, static_cast<unsigned long>(GetLastError()));
+        }
+        void *result = VirtualAlloc(reinterpret_cast<LPVOID>(address), size, MEM_COMMIT, PAGE_READWRITE);
+        if (result != reinterpret_cast<void *>(address)) {
+            if (!covered) VirtualFree(reinterpret_cast<LPVOID>(reserveStart), 0, MEM_RELEASE);
+            return fail("memory mapping at %#llx: Windows error %lu", address, static_cast<unsigned long>(GetLastError()));
+        }
+        if (!covered) allocations.push_back({reserveStart, reserveEnd});
+#else
         void *result = mmap(reinterpret_cast<void *>(address), size, PROT_READ | PROT_WRITE,
                             MAP_PRIVATE | MAP_ANONYMOUS | MAP_FIXED_NOREPLACE, -1, 0);
         if (result == MAP_FAILED) return fail("memory mapping at %#llx: %s", address, std::strerror(errno));
+        allocations.push_back({address, address + size});
+#endif
         ranges.push_back({address, address + size});
         return true;
     }
 
     bool mapHeap(uint64_t imageCursor) {
+#ifdef _WIN32
+        void *result = VirtualAlloc(nullptr, kHeapSize, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+        if (result == nullptr) return fail("memory mapping heap: Windows error %lu", static_cast<unsigned long>(GetLastError()));
+#else
         void *result = mmap(nullptr, kHeapSize, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
         if (result == MAP_FAILED) return fail("memory mapping heap: %s", std::strerror(errno));
+#endif
         heapBase = reinterpret_cast<uintptr_t>(result);
         heap = heapBase + (imageCursor - kImageHeap);
         ranges.push_back({heapBase, heapBase + kHeapSize});
+        allocations.push_back({heapBase, heapBase + kHeapSize});
         return true;
     }
 
@@ -204,6 +239,7 @@ struct clean_runtime {
         const uint64_t imageCursor = heap;
         if (imageCursor < kImageHeap || imageCursor > kImageHeap + kHeapSize) return fail("invalid heap in memory image");
         ranges.reserve(32);
+        allocations.reserve(32);
         for (uint32_t index = 0; index < count;) {
             Reader contents = reader;
             uint64_t rangeStart = 0;
@@ -749,6 +785,10 @@ const char *clean_error(const clean_runtime *runtime) { return runtime ? runtime
 
 void clean_close(clean_runtime *runtime) {
     if (!runtime) return;
-    for (auto it = runtime->ranges.rbegin(); it != runtime->ranges.rend(); ++it) munmap(reinterpret_cast<void *>(it->start), it->end - it->start);
+#ifdef _WIN32
+    for (auto it = runtime->allocations.rbegin(); it != runtime->allocations.rend(); ++it) VirtualFree(reinterpret_cast<LPVOID>(it->start), 0, MEM_RELEASE);
+#else
+    for (auto it = runtime->allocations.rbegin(); it != runtime->allocations.rend(); ++it) munmap(reinterpret_cast<void *>(it->start), it->end - it->start);
+#endif
     delete runtime;
 }

@@ -13,16 +13,27 @@ import (
 	"net/http/httptest"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"testing"
 )
 
 func testArchive(t *testing.T, content []byte) []byte {
 	t.Helper()
+	return testArchiveForPlatform(t, content, runtime.GOOS, runtime.GOARCH)
+}
+
+func testArchiveForPlatform(t *testing.T, content []byte, goos, goarch string) []byte {
+	t.Helper()
+	name := "spotirip-lossless"
+	if goos == "windows" {
+		name += ".exe"
+	}
 	var output bytes.Buffer
 	compressed := gzip.NewWriter(&output)
 	writer := tar.NewWriter(compressed)
-	if err := writer.WriteHeader(&tar.Header{Name: "spotirip-lossless-linux-amd64/spotirip-lossless", Mode: 0o755, Size: int64(len(content)), Typeflag: tar.TypeReg}); err != nil {
+	path := fmt.Sprintf("spotirip-lossless-%s-%s/%s", goos, goarch, name)
+	if err := writer.WriteHeader(&tar.Header{Name: path, Mode: 0o755, Size: int64(len(content)), Typeflag: tar.TypeReg}); err != nil {
 		t.Fatal(err)
 	}
 	if _, err := writer.Write(content); err != nil {
@@ -40,7 +51,7 @@ func testArchive(t *testing.T, content []byte) []byte {
 func updateServer(t *testing.T, archive []byte, version string, hash string) *httptest.Server {
 	t.Helper()
 	manifest := updateManifest{Version: version, Platforms: map[string]updatePackage{
-		"linux-amd64": {URL: "bundle.tar.gz", SHA256: hash, Size: int64(len(archive))},
+		runtime.GOOS + "-" + runtime.GOARCH: {URL: "bundle.tar.gz", SHA256: hash, Size: int64(len(archive))},
 	}}
 	return httptest.NewServer(http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		switch request.URL.Path {
@@ -72,7 +83,7 @@ func TestPerformUpdate(t *testing.T) {
 				return err
 			}
 			if string(data) != "new executable" {
-				return fmt.Errorf("falscher Inhalt")
+				return fmt.Errorf("unexpected content")
 			}
 			return nil
 		},
@@ -109,11 +120,11 @@ func TestPerformUpdateRejectsBadHash(t *testing.T) {
 }
 
 func TestPerformUpdateAlreadyCurrent(t *testing.T) {
-	archive := testArchive(t, []byte("unbenutzt"))
+	archive := testArchive(t, []byte("unused"))
 	sum := sha256.Sum256(archive)
 	server := updateServer(t, archive, "2000.1.0", hex.EncodeToString(sum[:]))
 	defer server.Close()
-	updated, err := performUpdate(context.Background(), updateRun{manifestURL: server.URL + "/manifest.json", currentPath: "unbenutzt", client: server.Client()})
+	updated, err := performUpdate(context.Background(), updateRun{manifestURL: server.URL + "/manifest.json", currentPath: "unused", client: server.Client()})
 	if err != nil || updated {
 		t.Fatalf("older version installed: updated=%v, %v", updated, err)
 	}
@@ -126,6 +137,18 @@ func TestUpdateArguments(t *testing.T) {
 	}
 	options, err = parseArguments([]string{"--version"})
 	if err != nil || !options.showVersion {
-		t.Fatalf("Versionsargument: %+v, %v", options, err)
+		t.Fatalf("version argument: %+v, %v", options, err)
+	}
+}
+
+func TestUnpackUpdateWindows(t *testing.T) {
+	content := []byte("windows executable")
+	archive := testArchiveForPlatform(t, content, "windows", "amd64")
+	unpacked, err := unpackUpdateForPlatform(archive, "windows", "amd64")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(unpacked, content) {
+		t.Fatalf("unexpected Windows executable: %q", unpacked)
 	}
 }

@@ -1,3 +1,5 @@
+//go:build !windows
+
 package player
 
 import (
@@ -26,11 +28,6 @@ import (
 	"github.com/devgianlu/go-librespot/spclient"
 	"github.com/devgianlu/go-librespot/vorbis"
 	"golang.org/x/exp/rand"
-)
-
-const (
-	SampleRate = 44100
-	Channels   = 2
 )
 
 const MaxStateVolume = 65535
