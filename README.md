@@ -1,6 +1,6 @@
 # SpotiRip Lossless
 
-SpotiRip Lossless is a Linux command-line downloader for Spotify tracks and music videos. It uses your own Spotify Premium account, selects the best available audio format, and writes the original audio stream without re-encoding.
+SpotiRip Lossless is a command-line downloader for Spotify tracks and music videos on Linux and Windows. It uses your own Spotify Premium account, selects the best available audio format, and writes the original audio stream without re-encoding.
 
 Protocol and cipher resources are embedded in the executable. The application does not require a running Spotify client, a Spotify executable, Unicorn, Wine, or a graphical session.
 
