@@ -270,7 +270,7 @@ func safeNameForOS(value, goos string) string {
 	return value
 }
 
-func download(ctx context.Context, options cliOptions, sess *session.Session, client *http.Client) error {
+func download(ctx context.Context, options cliOptions, sess *session.Session, client *http.Client, savedPath *string) error {
 	trackID, err := parseTrack(options.link)
 	if err != nil {
 		return err
@@ -347,8 +347,12 @@ func download(ctx context.Context, options cliOptions, sess *session.Session, cl
 	if err != nil {
 		return err
 	}
+	renderedPath := outputPath
 	outputPath, err = prepareOutputPath(outputPath, options.onDuplicate)
 	if err != nil {
+		if errors.Is(err, errDuplicate) && savedPath != nil {
+			*savedPath = renderedPath
+		}
 		return err
 	}
 	if err := os.MkdirAll(filepath.Dir(outputPath), 0o755); err != nil {
@@ -469,6 +473,9 @@ func download(ctx context.Context, options cliOptions, sess *session.Session, cl
 				return err
 			}
 			fmt.Printf("Audio completed: %s\n", outputPath)
+			if savedPath != nil {
+				*savedPath = outputPath
+			}
 			if err := embedMetadata(ctx, client, &track, options.link, outputPath, outputDir); err != nil {
 				fmt.Printf("Warning: could not embed metadata/cover: %v\n", err)
 			}

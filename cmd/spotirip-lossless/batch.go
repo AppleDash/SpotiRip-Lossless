@@ -17,14 +17,19 @@ import (
 
 type batchResult struct {
 	link string
+	path string
 	err  error
 }
 
-func resolveLinks(ctx context.Context, options cliOptions) ([]string, error) {
+type playlistInfo struct {
+	name string
+}
+
+func resolveLinks(ctx context.Context, options cliOptions) ([]string, *playlistInfo, error) {
 	if info, err := os.Stat(options.link); err == nil && info.Mode().IsRegular() {
 		data, err := os.ReadFile(options.link)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 		var links []string
 		for _, line := range strings.Split(string(data), "\n") {
@@ -34,37 +39,38 @@ func resolveLinks(ctx context.Context, options cliOptions) ([]string, error) {
 			}
 			nested := options
 			nested.link = line
-			resolved, err := resolveLinks(ctx, nested)
+			resolved, _, err := resolveLinks(ctx, nested)
 			if err != nil {
-				return nil, fmt.Errorf("%s: %w", line, err)
+				return nil, nil, fmt.Errorf("%s: %w", line, err)
 			}
 			links = append(links, resolved...)
 		}
-		return uniqueTrackLinks(links), nil
+		return uniqueTrackLinks(links), nil, nil
 	}
 	kind, id := splitSpotifyLink(options.link)
 	if kind == "track" {
-		return []string{options.link}, nil
+		return []string{options.link}, nil, nil
 	}
 	if kind != "album" && kind != "artist" && kind != "playlist" {
-		return nil, fmt.Errorf("a supported Spotify link or link list is required")
+		return nil, nil, fmt.Errorf("a supported Spotify link or link list is required")
 	}
 	sess, _, err := openSession(ctx, options)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	defer sess.Close()
 	sp := sess.Spclient()
 	var links []string
+	var info *playlistInfo
 	switch kind {
 	case "album":
 		albumID, err := librespot.SpotifyIdFromBase62(librespot.SpotifyIdTypeAlbum, id)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 		var album metadatapb.Album
 		if err := sp.ExtendedMetadataSimple(ctx, *albumID, extmetadatapb.ExtensionKind_ALBUM_V4, &album); err != nil {
-			return nil, fmt.Errorf("album metadata: %w", err)
+			return nil, nil, fmt.Errorf("album metadata: %w", err)
 		}
 		for _, disc := range album.Disc {
 			for _, track := range disc.Track {
@@ -74,11 +80,11 @@ func resolveLinks(ctx context.Context, options cliOptions) ([]string, error) {
 	case "artist":
 		artistID, err := librespot.SpotifyIdFromBase62(librespot.SpotifyIdTypeArtist, id)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 		var artist metadatapb.Artist
 		if err := sp.ExtendedMetadataSimple(ctx, *artistID, extmetadatapb.ExtensionKind_ARTIST_V4, &artist); err != nil {
-			return nil, fmt.Errorf("artist metadata: %w", err)
+			return nil, nil, fmt.Errorf("artist metadata: %w", err)
 		}
 		for _, group := range artist.TopTrack {
 			for _, track := range group.Track {
@@ -99,14 +105,21 @@ func resolveLinks(ctx context.Context, options cliOptions) ([]string, error) {
 	case "playlist":
 		playlistID, err := librespot.SpotifyIdFromBase62(librespot.SpotifyIdTypePlaylist, id)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 		playlist, err := sp.PlaylistContext(ctx, *playlistID)
 		if err != nil {
-			return nil, fmt.Errorf("Playlist: %w", err)
+			return nil, nil, fmt.Errorf("Playlist: %w", err)
 		}
 		if len(playlist.Pages) == 0 {
-			return nil, fmt.Errorf("playlist contains no track page")
+			return nil, nil, fmt.Errorf("playlist contains no track page")
+		}
+		info = &playlistInfo{name: playlist.Metadata["context_description"]}
+		if info.name == "" {
+			info.name = id
+		}
+		if owner := playlist.Metadata["context_owner"]; owner != "" {
+			info.name += " by " + owner
 		}
 		page := playlist.Pages[0]
 		for {
@@ -118,11 +131,11 @@ func resolveLinks(ctx context.Context, options cliOptions) ([]string, error) {
 			}
 			page, err = sp.PlaylistPage(ctx, page.NextPageUrl)
 			if err != nil {
-				return nil, fmt.Errorf("Playlist-Seite: %w", err)
+				return nil, nil, fmt.Errorf("Playlist-Seite: %w", err)
 			}
 		}
 	}
-	return uniqueTrackLinks(links), nil
+	return uniqueTrackLinks(links), info, nil
 }
 
 func splitSpotifyLink(link string) (string, string) {
@@ -178,7 +191,7 @@ func run(ctx context.Context, options cliOptions) error {
 		defer sess.Close()
 		return selfTest(ctx, sess.Spclient(), client)
 	}
-	links, err := resolveLinks(ctx, options)
+	links, playlist, err := resolveLinks(ctx, options)
 	if err != nil {
 		return err
 	}
@@ -188,14 +201,24 @@ func run(ctx context.Context, options cliOptions) error {
 	if len(links) == 0 {
 		return fmt.Errorf("no tracks found to download")
 	}
+	allLinks := links
+	paths := make(map[string]string)
 	if options.onDuplicate == "skip" {
 		index, err := buildDuplicateIndex(options.outputDir)
 		if err != nil {
 			return err
 		}
+		for _, link := range links {
+			if path, ok := index[link]; ok {
+				paths[link] = path
+			}
+		}
 		links = filterDuplicateLinks(links, index)
 		if len(links) == 0 {
 			fmt.Println("All existing files will be skipped")
+			if playlist != nil {
+				return savePlaylist(options.outputDir, playlist, allLinks, paths)
+			}
 			return nil
 		}
 	}
@@ -234,7 +257,9 @@ func run(ctx context.Context, options cliOptions) error {
 					results <- batchResult{link: link, err: sessionErr}
 					continue
 				}
-				results <- batchResult{link: link, err: download(ctx, jobOptions, sess, client)}
+				var path string
+				err := download(ctx, jobOptions, sess, client, &path)
+				results <- batchResult{link: link, path: path, err: err}
 			}
 		}()
 	}
@@ -248,6 +273,9 @@ func run(ctx context.Context, options cliOptions) error {
 	close(results)
 	var failures []string
 	for result := range results {
+		if result.path != "" {
+			paths[result.link] = result.path
+		}
 		if result.err != nil {
 			if errors.Is(result.err, errDuplicate) {
 				continue
@@ -256,6 +284,11 @@ func run(ctx context.Context, options cliOptions) error {
 		}
 	}
 	fmt.Printf("Downloads completed: %d succeeded, %d failed\n", len(links)-len(failures), len(failures))
+	if playlist != nil {
+		if err := savePlaylist(options.outputDir, playlist, allLinks, paths); err != nil {
+			failures = append(failures, err.Error())
+		}
+	}
 	if len(failures) > 0 {
 		return fmt.Errorf("failed downloads:\n%s", strings.Join(failures, "\n"))
 	}

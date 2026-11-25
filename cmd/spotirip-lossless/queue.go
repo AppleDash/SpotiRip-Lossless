@@ -60,8 +60,8 @@ func probeSpotifyURL(path string) string {
 	return findSpotifyURL(value)
 }
 
-func buildDuplicateIndex(outputDir string) (map[string]bool, error) {
-	index := make(map[string]bool)
+func buildDuplicateIndex(outputDir string) (map[string]string, error) {
+	index := make(map[string]string)
 	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
 		return index, nil
 	}
@@ -79,20 +79,20 @@ func buildDuplicateIndex(outputDir string) (map[string]bool, error) {
 		}
 		if url := probeSpotifyURL(path); url != "" {
 			if canonical := canonicalTrack(url); canonical != "" {
-				index[canonical] = true
+				index[canonical] = path
 			}
 		}
 		return nil
 	})
 }
 
-func filterDuplicateLinks(links []string, index map[string]bool) []string {
+func filterDuplicateLinks(links []string, index map[string]string) []string {
 	if len(index) == 0 {
 		return links
 	}
 	filtered := make([]string, 0, len(links))
 	for _, link := range links {
-		if !index[link] {
+		if _, ok := index[link]; !ok {
 			filtered = append(filtered, link)
 		}
 	}
