@@ -12,6 +12,7 @@ SpotiRip Lossless is a command-line downloader for Spotify audio and music video
 - Resume interrupted video downloads using completed segments
 - Parallel video/audio decryption and single-pass metadata and cover embedding
 - Albums, artists, playlists, link lists, metadata, cover art, retries, and HTTP Range audio resume
+- M3U8 playlist generation with ordered relative paths and existing-file support
 - Optional lyrics, subtitles, and full output verification with FFprobe and FFmpeg
 - SHA-256-verified self-updates with an integrated self-test and rollback
 - Portable Linux release without native playback-library or C++ runtime version conflicts
@@ -53,7 +54,7 @@ The archive contains the full README, metadata and video guides, license notices
 
 ## Verification
 
-This version is validated with unit, integration, race, and native Windows tests, release builds, and real FLAC, OGG, and 1080p MP4 downloads. Video interruption and segment-resume behavior is also tested. Vulnerability checks are run for dependency changes.
+This version is validated with unit, integration, race, and native Windows tests, release builds, and real FLAC, OGG, and 1080p MP4 downloads. Video interruption and segment-resume behavior is also tested. M3U generation, atomic replacement, and special-character paths are covered by unit tests. Vulnerability checks are run for dependency changes.
 
 ## Known limitations
 

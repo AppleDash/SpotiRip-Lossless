@@ -7,6 +7,7 @@ All notable changes are documented here. Versions use numeric dotted identifiers
 ### Added
 
 - Daily monitoring of Spotify's public stable and testing Linux package indexes
+- M3U8 playlist generation with ordered relative paths, duplicate handling, and atomic file replacement
 - Deduplicated issue notifications for newly detected Spotify client packages
 - Optional live login, metadata, PlayPlay, CDN, and cipher self-test using a repository secret with sanitized output
 
