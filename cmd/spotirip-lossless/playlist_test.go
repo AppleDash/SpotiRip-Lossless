@@ -32,3 +32,24 @@ func TestWriteM3U(t *testing.T) {
 		t.Fatalf("got:\n%s\nwant:\n%s", data, want)
 	}
 }
+
+func TestWriteM3UAtomicFailure(t *testing.T) {
+	dir := t.TempDir()
+	target := filepath.Join(dir, "My Mix.m3u8")
+	if err := os.WriteFile(target, []byte("existing playlist"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Mkdir(target+".tmp", 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if _, _, err := writeM3U(dir, "My Mix", nil, nil); err == nil {
+		t.Fatal("expected write failure")
+	}
+	data, err := os.ReadFile(target)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if string(data) != "existing playlist" {
+		t.Fatalf("existing playlist changed: %q", data)
+	}
+}

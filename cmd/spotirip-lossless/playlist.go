@@ -37,7 +37,12 @@ func writeM3U(outputDir, name string, links []string, paths map[string]string) (
 		return "", 0, err
 	}
 	target := filepath.Join(outputDir, safeName(name)+".m3u8")
-	if err := os.WriteFile(target, []byte(builder.String()), 0o644); err != nil {
+	temporary := target + ".tmp"
+	if err := os.WriteFile(temporary, []byte(builder.String()), 0o644); err != nil {
+		return "", 0, err
+	}
+	if err := os.Rename(temporary, target); err != nil {
+		os.Remove(temporary)
 		return "", 0, err
 	}
 	return target, written, nil
