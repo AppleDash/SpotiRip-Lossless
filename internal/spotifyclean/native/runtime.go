@@ -3,7 +3,7 @@ package native
 /*
 #cgo CFLAGS: -O3 -I${SRCDIR}
 #cgo CXXFLAGS: -O3 -std=c++17 -I${SRCDIR}
-#cgo !windows LDFLAGS: -lstdc++ -lm
+#cgo !windows LDFLAGS: -static-libgcc -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic -lm
 #cgo windows LDFLAGS: -static-libgcc -Wl,-Bstatic -lstdc++ -lwinpthread -Wl,-Bdynamic -lm
 #include "pcode_runtime.h"
 */
@@ -131,10 +131,10 @@ func (r *Runtime) SetCipherState(state []byte) error {
 
 func (r *Runtime) SeekCipher(block uint64) ([]byte, error) {
 	if r == nil || r.ptr == nil {
-		return nil, r.failure("Cipher-Seek")
+		return nil, r.failure("cipher seek")
 	}
 	if C.clean_seek_cipher(r.ptr, C.uint64_t(block)) != 0 {
-		return nil, r.failure("Cipher-Seek")
+		return nil, r.failure("cipher seek")
 	}
 	return r.CipherState()
 }

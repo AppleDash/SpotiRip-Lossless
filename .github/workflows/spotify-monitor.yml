@@ -1,0 +1,120 @@
+name: Spotify client monitor
+
+on:
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: spotify-client-monitor
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Check public Spotify Linux packages
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
+          import urllib.request
+
+          distributions = ["stable", "testing"]
+          candidates = []
+          for distribution in distributions:
+              url = f"https://repository.spotify.com/dists/{distribution}/non-free/binary-amd64/Packages"
+              with urllib.request.urlopen(url, timeout=30) as response:
+                  data = response.read(2 * 1024 * 1024 + 1)
+              if len(data) > 2 * 1024 * 1024:
+                  raise RuntimeError(f"Unexpectedly large package index for {distribution}")
+              blocks = data.decode("utf-8").split("\n\n")
+              block = next((item for item in blocks if item.startswith("Package: spotify-client\n")), None)
+              if block is None:
+                  raise RuntimeError(f"spotify-client is missing from {distribution}")
+              fields = dict(line.split(": ", 1) for line in block.splitlines() if ": " in line)
+              match = re.match(r"^(?:\d+:)?(\d+(?:\.\d+)+)", fields["Version"])
+              if not match:
+                  raise RuntimeError(f"Unsupported package version: {fields['Version']}")
+              candidates.append({
+                  "distribution": distribution,
+                  "version": fields["Version"],
+                  "base": match.group(1),
+                  "numeric": tuple(int(part) for part in match.group(1).split(".")),
+                  "sha256": fields["SHA256"],
+                  "url": url,
+              })
+          candidate = max(candidates, key=lambda item: item["numeric"])
+          reference = json.loads(open("internal/spotifyclean/client.json").read())["client_version"]
+          reference_numeric = tuple(int(part) for part in reference.split("."))
+          if candidate["numeric"] <= reference_numeric:
+              print(f"No newer Spotify Linux package: {candidate['base']}; engine reference: {reference}")
+              raise SystemExit(0)
+          title = f"Spotify Linux client {candidate['base']} available"
+          print(f"Newer package detected: {candidate['version']} ({candidate['distribution']})")
+          if os.environ.get("DRY_RUN") == "1":
+              print("Manual dry run: no issue will be created")
+              raise SystemExit(0)
+          result = subprocess.run(
+              ["gh", "issue", "list", "--state", "all", "--limit", "100", "--search", f'"{title}" in:title', "--json", "title"],
+              check=True, text=True, stdout=subprocess.PIPE,
+          )
+          if any(issue["title"] == title for issue in json.loads(result.stdout)):
+              print("An issue for this package version already exists")
+              raise SystemExit(0)
+          body = (
+              "The scheduled package monitor found a newer public Spotify Linux client package.\n\n"
+              f"- Distribution: `{candidate['distribution']}`\n"
+              f"- Package version: `{candidate['version']}`\n"
+              f"- Engine reference: `{reference}`\n"
+              f"- Package SHA-256: `{candidate['sha256']}`\n"
+              f"- Package index: {candidate['url']}\n\n"
+              "This is a package update notification, not a compatibility result. "
+              "Maintainer analysis and testing are required before changing engine resources."
+          )
+          subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=True)
+          PY
+
+  live-self-test:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.1.0
+        with:
+          go-version: '1.27.4'
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y g++
+      - name: Run optional live compatibility self-test
+        env:
+          SPOTIFY_CREDENTIALS: ${{ secrets.SPOTIFY_CREDENTIALS }}
+        run: |
+          set -euo pipefail
+          if [[ -z ${SPOTIFY_CREDENTIALS:-} ]]; then
+            printf 'Live self-test skipped: SPOTIFY_CREDENTIALS is not configured.\n'
+            exit 0
+          fi
+          credential_file="$RUNNER_TEMP/spotify-credentials.json"
+          log_file="$RUNNER_TEMP/spotify-self-test.log"
+          trap 'rm -f "$credential_file" "$log_file" "$RUNNER_TEMP/spotirip-lossless"' EXIT
+          umask 077
+          printf '%s' "$SPOTIFY_CREDENTIALS" > "$credential_file"
+          go build -tags=nodsp -ldflags='-linkmode=external -extld=gcc' -o "$RUNNER_TEMP/spotirip-lossless" ./cmd/spotirip-lossless
+          if "$RUNNER_TEMP/spotirip-lossless" --self-test --credentials "$credential_file" > "$log_file" 2>&1; then
+            printf 'Live login, metadata, PlayPlay, CDN, and cipher self-test passed.\n'
+          else
+            printf 'Live self-test failed. Review the local development environment; sensitive output was not published.\n' >&2
+            exit 1
+          fi
