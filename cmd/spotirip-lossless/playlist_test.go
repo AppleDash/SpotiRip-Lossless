@@ -10,7 +10,7 @@ func TestWriteM3U(t *testing.T) {
 	dir := t.TempDir()
 	links := []string{"a", "missing", "b"}
 	paths := map[string]string{
-		"a": filepath.Join(dir, "Artist", "Album", "01 - One.flac"),
+		"a": filepath.Join(dir, "#Artist", "Album", "01 - One.flac"),
 		"b": filepath.Join(dir, "Other", "Album", "02 - Two.ogg"),
 	}
 	target, written, err := writeM3U(dir, "My Mix", links, paths)
@@ -27,7 +27,7 @@ func TestWriteM3U(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	want := "#EXTM3U\n#PLAYLIST:My Mix\nArtist/Album/01 - One.flac\nOther/Album/02 - Two.ogg\n"
+	want := "#EXTM3U\n#PLAYLIST:My Mix\n./#Artist/Album/01 - One.flac\n./Other/Album/02 - Two.ogg\n"
 	if string(data) != want {
 		t.Fatalf("got:\n%s\nwant:\n%s", data, want)
 	}

@@ -30,7 +30,7 @@ func writeM3U(outputDir, name string, links []string, paths map[string]string) (
 		if err != nil {
 			return "", 0, err
 		}
-		builder.WriteString(filepath.ToSlash(relative) + "\n")
+		builder.WriteString("./" + filepath.ToSlash(relative) + "\n")
 		written++
 	}
 	if err := os.MkdirAll(outputDir, 0o755); err != nil {
