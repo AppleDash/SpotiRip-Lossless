@@ -120,6 +120,8 @@ This produces the best audio-only file and an MP4 file.
 ./spotirip-lossless links.txt
 ```
 
+A playlist link also writes `<output>/<Playlist> by <owner>.m3u8`, which lists the downloaded files (including skipped existing ones) in playlist order using relative paths.
+
 A link list contains one link per line. Empty lines and lines beginning with `#` are ignored. Duplicate tracks are removed after resolution.
 
 ## Common options
