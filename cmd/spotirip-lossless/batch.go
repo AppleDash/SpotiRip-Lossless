@@ -22,7 +22,8 @@ type batchResult struct {
 }
 
 type playlistInfo struct {
-	name string
+	name     string
+	imageURL string
 }
 
 func resolveLinks(ctx context.Context, options cliOptions) ([]string, *playlistInfo, error) {
@@ -114,7 +115,7 @@ func resolveLinks(ctx context.Context, options cliOptions) ([]string, *playlistI
 		if len(playlist.Pages) == 0 {
 			return nil, nil, fmt.Errorf("playlist contains no track page")
 		}
-		info = &playlistInfo{name: playlist.Metadata["context_description"]}
+		info = &playlistInfo{name: playlist.Metadata["context_description"], imageURL: playlist.Metadata["image_url"]}
 		if info.name == "" {
 			info.name = id
 		}
@@ -217,7 +218,7 @@ func run(ctx context.Context, options cliOptions) error {
 		if len(links) == 0 {
 			fmt.Println("All existing files will be skipped")
 			if playlist != nil {
-				return savePlaylist(options.outputDir, playlist, allLinks, paths)
+				return savePlaylist(ctx, options.outputDir, playlist, allLinks, paths)
 			}
 			return nil
 		}
@@ -285,7 +286,7 @@ func run(ctx context.Context, options cliOptions) error {
 	}
 	fmt.Printf("Downloads completed: %d succeeded, %d failed\n", len(links)-len(failures), len(failures))
 	if playlist != nil {
-		if err := savePlaylist(options.outputDir, playlist, allLinks, paths); err != nil {
+		if err := savePlaylist(ctx, options.outputDir, playlist, allLinks, paths); err != nil {
 			failures = append(failures, err.Error())
 		}
 	}
